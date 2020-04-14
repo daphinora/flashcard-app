@@ -194,3 +194,237 @@ Migrating to CreateUserCards (20200413221828)
   [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "user_cards" ON "flashcards"."id" = "user_cards"."flashcard_id" WHERE "user_cards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
   [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" ORDER BY "flashcards"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_cards" ON "users"."id" = "user_cards"."user_id" WHERE "user_cards"."flashcard_id" = ? LIMIT ?[0m  [["flashcard_id", 1], ["LIMIT", 11]]
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /Users/joshuagauthreaux/.rvm/gems/ruby-2.6.1/bin/rake:23)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /Users/joshuagauthreaux/.rvm/gems/ruby-2.6.1/bin/rake:23)
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTags (20200413230625)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "tags" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "category" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200413230625"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTaggedCards (20200413230630)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "tagged_cards" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "tag_id" integer, "flashcard_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200413230630"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Josh"], ["created_at", "2020-04-13 23:14:58.080278"], ["updated_at", "2020-04-13 23:14:58.080278"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Create (0.4ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "What is 2+2?"], ["answer", "4"], ["created_at", "2020-04-13 23:14:58.115517"], ["updated_at", "2020-04-13 23:14:58.115517"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("category", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["category", "coding"], ["created_at", "2020-04-13 23:14:58.128573"], ["updated_at", "2020-04-13 23:14:58.128573"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY "tags"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mFlashcard Load (0.1ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" ORDER BY "flashcards"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" ORDER BY "flashcards"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" ORDER BY "flashcards"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaggedCard Create (0.5ms)[0m  [1m[32mINSERT INTO "tagged_cards" ("tag_id", "flashcard_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["tag_id", 1], ["flashcard_id", 1], ["created_at", "2020-04-13 23:16:29.947557"], ["updated_at", "2020-04-13 23:16:29.947557"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tagged_cards" ON "tags"."id" = "tagged_cards"."tag_id" WHERE "tagged_cards"."flashcard_id" = ? LIMIT ?[0m  [["flashcard_id", 1], ["LIMIT", 11]]
+  [1m[36mFlashcard Load (0.3ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" ORDER BY "flashcards"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mFlashcard Load (0.6ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" ORDER BY "flashcards"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tagged_cards" ON "tags"."id" = "tagged_cards"."tag_id" WHERE "tagged_cards"."flashcard_id" = ? LIMIT ?[0m  [["flashcard_id", 1], ["LIMIT", 11]]
+  [1m[36mFlashcard Load (0.4ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mFlashcard Load (0.3ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" ORDER BY "flashcards"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Destroy (0.5ms)[0m  [1m[31mDELETE FROM "flashcards" WHERE "flashcards"."id" = ?[0m  [["id", 2]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mFlashcard Load (0.3ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY "tags"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY "tags"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY "tags"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY "tags"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mFlashcard Load (0.3ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "tagged_cards" ON "flashcards"."id" = "tagged_cards"."flashcard_id" WHERE "tagged_cards"."tag_id" = ? LIMIT ?[0m  [["tag_id", 1], ["LIMIT", 11]]
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /Users/joshuagauthreaux/.rvm/gems/ruby-2.6.1/bin/rake:23)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /Users/joshuagauthreaux/.rvm/gems/ruby-2.6.1/bin/rake:23)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCollections (20200413232640)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "collections" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200413232640"]]
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCardCollections (20200413232645)
+  [1m[35m (28.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (22.3ms)[0m  [1m[35mCREATE TABLE "card_collections" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "collection_id" integer, "flashcard_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200413232645"]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Josh"], ["created_at", "2020-04-13 23:36:29.661359"], ["updated_at", "2020-04-13 23:36:29.661359"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Create (0.7ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "What is 2+2?"], ["answer", "4"], ["created_at", "2020-04-13 23:36:29.676169"], ["updated_at", "2020-04-13 23:36:29.676169"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.7ms)[0m  [1m[32mINSERT INTO "tags" ("category", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["category", "coding"], ["created_at", "2020-04-13 23:36:29.690201"], ["updated_at", "2020-04-13 23:36:29.690201"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCollection Load (0.6ms)[0m  [1m[34mSELECT "collections".* FROM "collections" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCardCollection Load (0.3ms)[0m  [1m[34mSELECT "card_collections".* FROM "card_collections" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT "collections".* FROM "collections" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Josh"], ["created_at", "2020-04-13 23:39:59.149574"], ["updated_at", "2020-04-13 23:39:59.149574"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Create (0.6ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "What is 2+2?"], ["answer", "4"], ["created_at", "2020-04-13 23:39:59.162609"], ["updated_at", "2020-04-13 23:39:59.162609"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("category", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["category", "coding"], ["created_at", "2020-04-13 23:39:59.176143"], ["updated_at", "2020-04-13 23:39:59.176143"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCollection Create (0.3ms)[0m  [1m[32mINSERT INTO "collections" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["name", "Software Engineering"], ["created_at", "2020-04-13 23:39:59.200745"], ["updated_at", "2020-04-13 23:39:59.200745"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT "collections".* FROM "collections" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" ORDER BY "collections"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" ORDER BY "collections"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollection Destroy (0.4ms)[0m  [1m[31mDELETE FROM "collections" WHERE "collections"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" ORDER BY "collections"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Josh"], ["created_at", "2020-04-13 23:44:13.870780"], ["updated_at", "2020-04-13 23:44:13.870780"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Create (0.4ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "What is 2+2?"], ["answer", "4"], ["created_at", "2020-04-13 23:44:13.884031"], ["updated_at", "2020-04-13 23:44:13.884031"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("category", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["category", "coding"], ["created_at", "2020-04-13 23:44:13.898512"], ["updated_at", "2020-04-13 23:44:13.898512"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT "collections".* FROM "collections" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCollection Create (0.7ms)[0m  [1m[32mINSERT INTO "collections" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["name", "English"], ["created_at", "2020-04-13 23:47:50.970616"], ["updated_at", "2020-04-13 23:47:50.970616"]]
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCollection Load (0.4ms)[0m  [1m[34mSELECT "collections".* FROM "collections" ORDER BY "collections"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCollection Destroy (2.8ms)[0m  [1m[31mDELETE FROM "collections" WHERE "collections"."id" = ?[0m  [["id", 2]]
+  [1m[36mCollection Load (0.4ms)[0m  [1m[34mSELECT "collections".* FROM "collections" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Josh"], ["created_at", "2020-04-13 23:49:24.081187"], ["updated_at", "2020-04-13 23:49:24.081187"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Create (0.4ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "What is 2+2?"], ["answer", "4"], ["created_at", "2020-04-13 23:49:24.098518"], ["updated_at", "2020-04-13 23:49:24.098518"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.3ms)[0m  [1m[32mINSERT INTO "tags" ("category", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["category", "coding"], ["created_at", "2020-04-13 23:49:24.115702"], ["updated_at", "2020-04-13 23:49:24.115702"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Josh"], ["created_at", "2020-04-13 23:50:22.890379"], ["updated_at", "2020-04-13 23:50:22.890379"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Create (0.5ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "What is 2+2?"], ["answer", "4"], ["created_at", "2020-04-13 23:50:22.907950"], ["updated_at", "2020-04-13 23:50:22.907950"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("category", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["category", "coding"], ["created_at", "2020-04-13 23:50:22.918471"], ["updated_at", "2020-04-13 23:50:22.918471"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Josh"], ["created_at", "2020-04-13 23:51:36.155620"], ["updated_at", "2020-04-13 23:51:36.155620"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Create (1.1ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "What is 2+2?"], ["answer", "4"], ["created_at", "2020-04-13 23:51:36.169628"], ["updated_at", "2020-04-13 23:51:36.169628"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.3ms)[0m  [1m[32mINSERT INTO "tags" ("category", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["category", "coding"], ["created_at", "2020-04-13 23:51:36.182109"], ["updated_at", "2020-04-13 23:51:36.182109"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT "collections".* FROM "collections" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Josh"], ["created_at", "2020-04-13 23:52:12.455716"], ["updated_at", "2020-04-13 23:52:12.455716"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Create (0.8ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "What is 2+2?"], ["answer", "4"], ["created_at", "2020-04-13 23:52:12.470163"], ["updated_at", "2020-04-13 23:52:12.470163"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("category", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["category", "coding"], ["created_at", "2020-04-13 23:52:12.482584"], ["updated_at", "2020-04-13 23:52:12.482584"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCollection Create (0.4ms)[0m  [1m[32mINSERT INTO "collections" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["name", "Software Engineering"], ["created_at", "2020-04-13 23:52:12.510513"], ["updated_at", "2020-04-13 23:52:12.510513"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" ORDER BY "collections"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT "collections".* FROM "collections" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" ORDER BY "collections"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mFlashcard Load (1.9ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" ORDER BY "flashcards"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" ORDER BY "flashcards"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" ORDER BY "flashcards"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" ORDER BY "collections"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" ORDER BY "collections"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" ORDER BY "collections"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" ORDER BY "flashcards"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCardCollection Create (1.3ms)[0m  [1m[32mINSERT INTO "card_collections" ("collection_id", "flashcard_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["collection_id", 3], ["flashcard_id", 1], ["created_at", "2020-04-14 00:07:48.151947"], ["updated_at", "2020-04-14 00:07:48.151947"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mFlashcard Load (0.3ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ? LIMIT ?[0m  [["collection_id", 3], ["LIMIT", 11]]
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" ORDER BY "collections"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ? LIMIT ?[0m  [["collection_id", 3], ["LIMIT", 11]]
+  [1m[36mFlashcard Load (0.1ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" ORDER BY "flashcards"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" INNER JOIN "card_collections" ON "collections"."id" = "card_collections"."collection_id" WHERE "card_collections"."flashcard_id" = ? LIMIT ?[0m  [["flashcard_id", 1], ["LIMIT", 11]]
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" ORDER BY "collections"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" ORDER BY "collections"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" ORDER BY "collections"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]

@@ -9,3 +9,5 @@
 
 usertest = User.create(username: "Josh")
 flashtest = Flashcard.create(question: "What is 2+2?", answer: "4")
+tagtest = Tag.create(category: "coding")
+collecttest = Collection.create(user_id: User.first.id, name: "Software Engineering")
