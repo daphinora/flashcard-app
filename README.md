@@ -6,6 +6,7 @@ Add a description of the app here!
 
 
 ++++++++++++++++++++++++++++++++++++++++++++
+
 Stretch goals:
 
 ~User password authentication
