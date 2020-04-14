@@ -1,24 +1,12 @@
-# README
+CardFlash (insert a pun or something? ASCII? Might be a stretch goal)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to CardFlash, a flashcard generator!
 
-Things you may want to cover:
+Add a description of the app here!
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Stretch goals:
+User password authentication
+fancy flip card things for the flashcards
+difficulty
+user-to-user interaction
+ascii prettiness
