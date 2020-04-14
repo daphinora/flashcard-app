@@ -8,8 +8,6 @@
 
 ## API CALLS ##
 class Trivia
-    include Hashie::Extensions::DeepFind
-    include HTTParty
     require 'open-uri'
     require 'net/http'
     require 'json'
@@ -23,7 +21,6 @@ class Trivia
         request = (URL + "&#{info_request}&type=multiple" + TOKEN).to_json
         @request_object = Net::HTTP.get_response(URI)
         @request_hash = JSON.parse(@request_object.body)
-    
     end
 
     def self.category(request)
