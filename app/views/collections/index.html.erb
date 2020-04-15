@@ -1,0 +1,7 @@
+<h2>Collections</h2>
+<p>Click on a collection to view it's contents:</p>
+
+<% @sorted_collections = @collections.sort_by{|coll| coll.name}%>
+<% @sorted_collections.each do |coll| %>
+<%= link_to coll.name, collection_path(coll)%><br><br>
+<% end %>
