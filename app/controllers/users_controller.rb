@@ -1,8 +1,6 @@
 class UsersController < ApplicationController
     def index
-        @users = User.all
-        #login from view page, using form
-        #redirect to user new, from form
+        redirect_to user_path
     end
 
     def show
@@ -10,7 +8,7 @@ class UsersController < ApplicationController
     end
     
     def new
-
+        @user = User.new
     end
 
 end
