@@ -2896,3 +2896,455 @@ Completed 404 Not Found in 7ms (ActiveRecord: 0.7ms | Allocations: 3734)
 ActiveRecord::RecordNotFound (Couldn't find User with 'id'={"controller"=>"users", "action"=>"index"}):
   
 app/controllers/users_controller.rb:3:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT "collections".* FROM "collections" ORDER BY "collections"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" ORDER BY "collections"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mFlashcard Load (0.6ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ? LIMIT ?[0m  [["collection_id", 1], ["LIMIT", 11]]
+  [1m[36mFlashcard Load (1.3ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" ORDER BY "flashcards"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" ORDER BY "flashcards"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" INNER JOIN "card_collections" ON "collections"."id" = "card_collections"."collection_id" WHERE "card_collections"."flashcard_id" = ? LIMIT ?[0m  [["flashcard_id", 1], ["LIMIT", 11]]
+Started GET "/collections/2" for ::1 at 2020-04-14 21:33:25 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCollection Load (0.4ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  Rendered collections/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 300)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 46.9ms | ActiveRecord: 1.0ms | Allocations: 17198)
+
+
+Started GET "/collections/2" for ::1 at 2020-04-14 21:33:27 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  Rendered collections/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 34)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 17.1ms | ActiveRecord: 0.2ms | Allocations: 4810)
+
+
+Started GET "/collections/2" for ::1 at 2020-04-14 21:33:27 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  Rendered collections/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 33)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.1ms | Allocations: 4805)
+
+
+Started GET "/collections/2" for ::1 at 2020-04-14 21:35:10 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.5ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 2]]
+  ↳ app/views/collections/show.html.erb:5
+  Rendered collections/show.html.erb within layouts/application (Duration: 45.7ms | Allocations: 12628)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 55.5ms | ActiveRecord: 1.4ms | Allocations: 18232)
+
+
+Started GET "/collections/2" for ::1 at 2020-04-14 21:35:11 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.1ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 2]]
+  ↳ app/views/collections/show.html.erb:5
+  Rendered collections/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 887)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.3ms | Allocations: 5643)
+
+
+Started GET "/collections/2" for ::1 at 2020-04-14 21:35:33 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 2]]
+  ↳ app/views/collections/show.html.erb:5
+  Rendered collections/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1078)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.3ms | Allocations: 6789)
+
+
+Started GET "/collections/2" for ::1 at 2020-04-14 21:35:34 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.1ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 2]]
+  ↳ app/views/collections/show.html.erb:5
+  Rendered collections/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 886)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.3ms | Allocations: 5641)
+
+
+Started GET "/collections/2" for ::1 at 2020-04-14 21:35:34 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 2]]
+  ↳ app/views/collections/show.html.erb:5
+  Rendered collections/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 885)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.4ms | Allocations: 5637)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mFlashcard Load (0.6ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards"[0m
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" ORDER BY "collections"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" ORDER BY "collections"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" ORDER BY "collections"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" ORDER BY "flashcards"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 3]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCardCollection Create (0.7ms)[0m  [1m[32mINSERT INTO "card_collections" ("collection_id", "flashcard_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["collection_id", 1], ["flashcard_id", 4], ["created_at", "2020-04-15 02:36:50.381990"], ["updated_at", "2020-04-15 02:36:50.381990"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mFlashcard Load (0.3ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 1]]
+Started GET "/collections/2" for ::1 at 2020-04-14 21:37:07 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.3ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 2]]
+  ↳ app/views/collections/show.html.erb:5
+  Rendered collections/show.html.erb within layouts/application (Duration: 40.2ms | Allocations: 10860)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 97ms (Views: 77.8ms | ActiveRecord: 2.1ms | Allocations: 28178)
+
+
+Started GET "/collections/1" for ::1 at 2020-04-14 21:37:11 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.3ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 1]]
+  ↳ app/views/collections/show.html.erb:5
+  Rendered collections/show.html.erb within layouts/application (Duration: 26.9ms | Allocations: 5627)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.8ms | Allocations: 6672)
+
+
+  
+ActionView::Template::Error (undefined method `to_model' for 4:Integer
+Did you mean?  to_yaml):
+    3: <%= link_to '<button type="button">Add Flashcards from Index</button>'.html_safe, "/flashcards" %></h2>
+    4: 
+    5: <% @collection.flashcards.each do |card|%>
+    6: <%= link_to card.question, card.id %><br>
+    7: <%= card.answer %>
+    8: <% end %>
+  
+app/views/collections/show.html.erb:6
+app/views/collections/show.html.erb:5
+Started GET "/collections/1" for ::1 at 2020-04-14 21:37:57 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 1]]
+  ↳ app/views/collections/show.html.erb:5
+  Rendered collections/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1112)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.4ms | ActiveRecord: 0.4ms | Allocations: 6827)
+
+
+Started GET "/flashcards/4" for ::1 at 2020-04-14 21:38:10 -0500
+Processing by FlashcardsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mFlashcard Load (0.3ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" WHERE "flashcards"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/flashcards_controller.rb:7:in `show'
+  Rendering flashcards/show.html.erb within layouts/application
+  Rendered flashcards/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 73)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 11.9ms | ActiveRecord: 0.3ms | Allocations: 5489)
+
+
+Started GET "/collections" for ::1 at 2020-04-14 21:40:59 -0500
+Processing by CollectionsController#index as HTML
+  Rendering collections/index.html.erb within layouts/application
+  [1m[36mCollection Load (0.6ms)[0m  [1m[34mSELECT "collections".* FROM "collections"[0m
+  ↳ app/views/collections/index.html.erb:4:in `sort_by'
+  Rendered collections/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 877)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 20.4ms | ActiveRecord: 0.6ms | Allocations: 6081)
+
+
+Started GET "/collections/2" for ::1 at 2020-04-14 21:41:00 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.1ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 2]]
+  ↳ app/views/collections/show.html.erb:5
+  Rendered collections/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1127)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.3ms | Allocations: 6035)
+
+
+Started GET "/collections/2" for ::1 at 2020-04-14 21:42:59 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 2]]
+  ↳ app/views/collections/show.html.erb:5
+  Rendered collections/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1121)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 21.2ms | ActiveRecord: 0.5ms | Allocations: 6808)
+
+
+Started GET "/collections/2" for ::1 at 2020-04-14 21:43:07 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 2]]
+  ↳ app/views/collections/show.html.erb:5
+  Rendered collections/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1121)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 0.4ms | Allocations: 6808)
+
+
+Started GET "/collections/2" for ::1 at 2020-04-14 21:43:08 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 2]]
+  ↳ app/views/collections/show.html.erb:5
+  Rendered collections/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 886)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.3ms | Allocations: 5637)
+
+
+Started GET "/flashcards" for ::1 at 2020-04-14 21:43:12 -0500
+Processing by FlashcardsController#index as HTML
+  Rendering flashcards/index.html.erb within layouts/application
+  Rendered flashcards/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 73)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 4911)
+
+
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT "collections".* FROM "collections" ORDER BY "collections"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mFlashcard Load (0.6ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ? LIMIT ?[0m  [["collection_id", 2], ["LIMIT", 11]]
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" ORDER BY "collections"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mFlashcard Load (0.1ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ? LIMIT ?[0m  [["collection_id", 2], ["LIMIT", 11]]
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" ORDER BY "collections"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 2]]
+  [1m[36mCollection Load (0.4ms)[0m  [1m[34mSELECT "collections".* FROM "collections"[0m
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT "collections".* FROM "collections" ORDER BY "collections"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mFlashcard Load (1.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 1]]
+  [1m[36mFlashcard Load (0.3ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" ORDER BY "flashcards"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 4]]
+  [1m[35m (0.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCardCollection Create (1.3ms)[0m  [1m[32mINSERT INTO "card_collections" ("collection_id", "flashcard_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["collection_id", 1], ["flashcard_id", 5], ["created_at", "2020-04-15 02:45:22.430010"], ["updated_at", "2020-04-15 02:45:22.430010"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/collections/2" for ::1 at 2020-04-14 21:45:38 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 2]]
+  ↳ app/views/collections/show.html.erb:5
+  Rendered collections/show.html.erb within layouts/application (Duration: 54.2ms | Allocations: 10714)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 138ms (Views: 108.7ms | ActiveRecord: 1.8ms | Allocations: 28104)
+
+
+Started GET "/collections/1" for ::1 at 2020-04-14 21:45:51 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCollection Load (0.8ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 1]]
+  ↳ app/views/collections/show.html.erb:5
+  Rendered collections/show.html.erb within layouts/application (Duration: 21.6ms | Allocations: 3665)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 43.0ms | ActiveRecord: 1.0ms | Allocations: 8433)
+
+
+Started GET "/collections/1" for ::1 at 2020-04-14 21:46:03 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.1ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 1]]
+  ↳ app/views/collections/show.html.erb:5
+  Rendered collections/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1188)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.3ms | Allocations: 6892)
+
+
+Started GET "/collections/1" for ::1 at 2020-04-14 21:47:30 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.1ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 1]]
+  ↳ app/views/collections/show.html.erb:7
+  Rendered collections/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1188)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 0.3ms | Allocations: 6877)
+
+
+Started GET "/collections/1" for ::1 at 2020-04-14 21:47:49 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (14.4ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 1]]
+  ↳ app/views/collections/show.html.erb:7
+  Rendered collections/show.html.erb within layouts/application (Duration: 18.8ms | Allocations: 1189)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 15.8ms | ActiveRecord: 14.5ms | Allocations: 6884)
+
+
+Started GET "/collections/1" for ::1 at 2020-04-14 21:52:13 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.1ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 1]]
+  ↳ app/views/collections/show.html.erb:5
+  Rendered collections/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1230)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 0.4ms | Allocations: 6924)
+
+
+Started GET "/collections" for ::1 at 2020-04-14 21:52:17 -0500
+Processing by CollectionsController#index as HTML
+  Rendering collections/index.html.erb within layouts/application
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections"[0m
+  ↳ app/views/collections/index.html.erb:4:in `sort_by'
+  Rendered collections/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 876)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.2ms | Allocations: 5292)
+
+
+Started GET "/users/1" for ::1 at 2020-04-14 21:52:20 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 73)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 9.3ms | ActiveRecord: 1.1ms | Allocations: 9662)
+
+
+Started GET "/collections/2" for ::1 at 2020-04-14 21:52:44 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 2]]
+  ↳ app/views/collections/show.html.erb:5
+  Rendered collections/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1163)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.4ms | Allocations: 6853)
+
+
+Started GET "/collections/2" for ::1 at 2020-04-14 21:53:07 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.4ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 2]]
+  ↳ app/views/collections/show.html.erb:5
+  Rendered collections/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1610)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.5ms | Allocations: 7297)
+
+
+Started GET "/collections/2" for ::1 at 2020-04-14 21:53:13 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.1ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 2]]
+  ↳ app/views/collections/show.html.erb:5
+  Rendered collections/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1165)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.4ms | Allocations: 6853)
+
+
+Started GET "/users/1" for ::1 at 2020-04-14 21:53:15 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 71)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.1ms | Allocations: 5405)
+
+
+Started GET "/collections/2" for ::1 at 2020-04-14 21:53:28 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 2]]
+  ↳ app/views/collections/show.html.erb:5
+  Rendered collections/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1163)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 0.3ms | Allocations: 6854)
+
+
+Started GET "/collections/2" for ::1 at 2020-04-14 21:55:59 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.1ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 2]]
+  ↳ app/views/collections/show.html.erb:5
+  Rendered collections/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1173)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.3ms | Allocations: 6861)
+
+
+Started GET "/users/1" for ::1 at 2020-04-14 21:56:02 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 72)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.1ms | Allocations: 5416)
+
+

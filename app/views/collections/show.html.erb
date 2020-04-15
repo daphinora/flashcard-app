@@ -1,0 +1,15 @@
+<h2><%=@collection.name%>
+<%= link_to '<button type="button">New Flashcard</button>'.html_safe, "/flashcards/new" %>
+<%= link_to '<button type="button">Add Flashcards from Index</button>'.html_safe, "/flashcards" %></h2>
+
+<% if @collection.flashcards.length > 0 %>
+    <% @collection.flashcards.each do |card|%>
+        <%= link_to card.question, "/flashcards/#{card.id}" %><br>
+        <%= card.answer %><br><br>
+    <% end %>
+<% else %>
+    <p>No Flashcards Here Yet! :(</p>
+<% end %>
+
+<%= link_to '<button type="button">My Collections</button>'.html_safe, "/users/#{@collection.user_id}" %>
+<%# Change this if we get to sessions--we need to link to the current user's collections isntead of just the current collection's user show page lol %>
