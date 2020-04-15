@@ -2897,6 +2897,7 @@ ActiveRecord::RecordNotFound (Couldn't find User with 'id'={"controller"=>"users
   
 app/controllers/users_controller.rb:3:in `index'
 <<<<<<< HEAD
+<<<<<<< HEAD
   [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT "collections".* FROM "collections" ORDER BY "collections"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" ORDER BY "collections"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
@@ -3348,6 +3349,8 @@ Processing by UsersController#show as HTML
 [Webpacker] Everything's up-to-date. Nothing to do
 Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.1ms | Allocations: 5416)
 =======
+=======
+>>>>>>> 451a75649ab092c96f6903e0fef7a609f55ea958
 Started GET "/rails/users/new" for 127.0.0.1 at 2020-04-14 21:33:33 -0500
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   
@@ -4226,6 +4229,9 @@ Processing by UsersController#new as HTML
   Rendered users/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1076)
 [Webpacker] Everything's up-to-date. Nothing to do
 Completed 200 OK in 22ms (Views: 11.5ms | ActiveRecord: 1.1ms | Allocations: 10251)
+<<<<<<< HEAD
+>>>>>>> 451a75649ab092c96f6903e0fef7a609f55ea958
+=======
 >>>>>>> 451a75649ab092c96f6903e0fef7a609f55ea958
 
 
