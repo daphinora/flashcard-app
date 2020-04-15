@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
     # def index
-    #     @users = User.all
+    #     redirect_to 
     # end
 
     def show
@@ -16,6 +16,7 @@ class UsersController < ApplicationController
         # binding.pry
         if @user.valid?
             @user.save
+            flash[:success] = "Welcome!, now let's get FLASHIN"
             redirect_to user_path(@user)
         else
           render 'new'
