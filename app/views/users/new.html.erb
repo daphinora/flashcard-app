@@ -9,7 +9,7 @@
     <%= form_for(@user) do |f| %>
         <%= f.label :username %>
         <%= f.text_field :username %>
-        
+
         <%= f.label :password %>
         <%= f.password_field :password %>
 
@@ -19,4 +19,17 @@
       <%= f.submit "Create an account", class: "btn btn-primary" %>
     <% end %>
   </div>
+
+
+</div class="col-md-6 col-md-offset-1">
+<% if @user.errors.any? %>
+<div>
+<h2> <%= pluralize(@user.errors.count, "error") %> prohibited this account from being created </h2>
+ 
+   <ul>
+   <% @user.errors.full_messages.each do |msg| %>
+       <li> <%=  msg %> </li>
+       <% end %>
+   </ul>
+<% end %>
 </div>
