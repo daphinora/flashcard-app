@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-    # def index
-    #     redirect_to 
-    # end
+    def index
+        
+    end
 
     def show
         @user = User.find(params[:id])
@@ -30,3 +30,5 @@ class UsersController < ApplicationController
       end
 
 end
+
+# link_to collection.name, @collection_path(collection) 
