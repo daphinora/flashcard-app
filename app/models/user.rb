@@ -9,8 +9,4 @@ class User < ApplicationRecord
     
     has_secure_password   
 
-
-    def self.user_collections(user_id)
-        binding.pry
-    end
 end

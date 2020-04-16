@@ -11764,3 +11764,852 @@ Completed 200 OK in 30138ms (Views: 30125.4ms | ActiveRecord: 0.9ms | Allocation
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 00:38:06 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ (pry):12:in `user_collections'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ (pry):14:in `user_collections'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ (pry):15:in `user_collections'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ (pry):16:in `user_collections'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 222)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 241999ms (Views: 17.5ms | ActiveRecord: 0.8ms | Allocations: 41367)
+
+
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 00:43:06 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.7ms | Allocations: 9012)
+
+
+  
+NoMethodError (undefined method `id' for #<Class:0x00007f8c247269d0>
+Did you mean?  ids):
+  
+app/models/user.rb:14:in `user_collections'
+app/controllers/users_controller.rb:8:in `show'
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 00:43:15 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 22)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 104179ms (Views: 9.5ms | ActiveRecord: 0.8ms | Allocations: 25193)
+
+
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 00:45:02 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.2ms | Allocations: 9015)
+
+
+  
+NoMethodError (undefined method `id' for #<Class:0x00007f8c240f6a10>
+Did you mean?  ids):
+  
+app/models/user.rb:14:in `user_collections'
+app/controllers/users_controller.rb:8:in `show'
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 00:45:13 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms | Allocations: 3466)
+
+
+  
+NoMethodError (undefined method `id' for #<Class:0x00007f8c240f6a10>
+Did you mean?  ids):
+  
+app/models/user.rb:14:in `user_collections'
+app/controllers/users_controller.rb:8:in `show'
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 00:45:18 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms | Allocations: 3467)
+
+
+  
+NoMethodError (undefined method `id' for #<Class:0x00007f8c240f6a10>
+Did you mean?  ids):
+  
+app/models/user.rb:14:in `user_collections'
+app/controllers/users_controller.rb:8:in `show'
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 00:45:40 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 1.1ms | Allocations: 8977)
+
+
+  
+NoMethodError (undefined method `user_id' for #<Class:0x00007f8c241b3db8>):
+  
+app/models/user.rb:14:in `user_collections'
+app/controllers/users_controller.rb:8:in `show'
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 00:46:02 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.6ms | Allocations: 8993)
+
+
+  
+NoMethodError (undefined method `[]' for #<Class:0x00007f8c23504ef0>):
+  
+app/models/user.rb:14:in `user_collections'
+app/controllers/users_controller.rb:8:in `show'
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 00:46:18 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.7ms | Allocations: 8946)
+
+
+  
+NoMethodError (undefined method `[]' for #<Class:0x00007f8c23639ed8>):
+  
+app/models/user.rb:14:in `user_collections'
+app/controllers/users_controller.rb:8:in `show'
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 00:46:29 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.7ms | Allocations: 9003)
+
+
+  
+NoMethodError (undefined method `x' for #<Class:0x00007f8c1e663238>):
+  
+app/models/user.rb:14:in `user_collections'
+app/controllers/users_controller.rb:8:in `show'
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 00:47:05 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.6ms | Allocations: 8947)
+
+
+  
+NoMethodError (undefined method `[]' for #<Class:0x00007f8c2324e198>):
+  
+app/models/user.rb:14:in `user_collections'
+app/controllers/users_controller.rb:8:in `show'
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 00:47:27 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1203)
+
+
+  
+SyntaxError (/Users/joshuagauthreaux/Development/code/flashcard-app/app/models/user.rb:14: syntax error, unexpected '(', expecting ']'
+        t = User[:id(x)]
+                    ^):
+  
+app/models/user.rb:14: syntax error, unexpected '(', expecting ']'
+app/models/user.rb:14: syntax error, unexpected '(', expecting ']'
+app/models/user.rb:14: syntax error, unexpected '(', expecting ']'
+app/controllers/users_controller.rb:7:in `show'
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 00:47:59 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCollection Load (6.4ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ? ORDER BY "collections"."id" ASC LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 22)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28767177ms (Views: 17.7ms | ActiveRecord: 0.8ms | Allocations: 129989)
+
+
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 08:47:34 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  [1m[36mCollection Load (0.7ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ?[0m  [["user_id", 35]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 441.4ms | Allocations: 162782)
+Completed 500 Internal Server Error in 485ms (ActiveRecord: 4.7ms | Allocations: 173261)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `collection' for #<#<Class:0x00007f8c22fa7318>:0x00007f8c1eb49180>
+Did you mean?  collection_url):
+    11:       <h1> 
+    12:        <h1> Hi <%= @user.username %> ! </h1>
+    13:        <h1> These are your current collections:</h1> 
+    14:        <%= link_to collection.name, @user_collections %> <br> 
+    15:       </h1>
+    16:     </section>
+    17:   </aside>
+  
+app/views/users/show.html.erb:14
+Started GET "/rails/info/routes?path=collection" for 127.0.0.1 at 2020-04-16 08:47:44 -0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"collection"}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2045)
+
+
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 08:48:25 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ?[0m  [["user_id", 35]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 399.0ms | Allocations: 162828)
+Completed 500 Internal Server Error in 408ms (ActiveRecord: 0.8ms | Allocations: 165119)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `collection' for #<#<Class:0x00007f8c233cd550>:0x00007f8c233d79d8>
+Did you mean?  collection_url):
+    11:       <h1> 
+    12:        <h1> Hi <%= @user.username %> ! </h1>
+    13:        <h1> These are your current collections:</h1> 
+    14:        <%= link_to collection.name, @collection_path %> <br> 
+    15:       </h1>
+    16:     </section>
+    17:   </aside>
+  
+app/views/users/show.html.erb:14
+Started GET "/login" for 127.0.0.1 at 2020-04-16 08:48:27 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 772)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 6525)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-16 08:48:34 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"l7Pu6f40+yf9U0zxiHGJ3exzCog2z2RftkOhOSvRQPjBD5MdNYLw/BXLTYFqctj9PufhGMg6jJa9LA7z4IjVmg==", "session"=>{"username"=>"pleroo", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "pleroo"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/users/35
+Completed 302 Found in 76ms (ActiveRecord: 0.4ms | Allocations: 1089)
+
+
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 08:48:34 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ?[0m  [["user_id", 35]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 406.3ms | Allocations: 162629)
+Completed 500 Internal Server Error in 411ms (ActiveRecord: 0.3ms | Allocations: 164172)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `collection' for #<#<Class:0x00007f8c233cd550>:0x00007f8c2452c508>
+Did you mean?  collection_url):
+    11:       <h1> 
+    12:        <h1> Hi <%= @user.username %> ! </h1>
+    13:        <h1> These are your current collections:</h1> 
+    14:        <%= link_to collection.name, @collection_path %> <br> 
+    15:       </h1>
+    16:     </section>
+    17:   </aside>
+  
+app/views/users/show.html.erb:14
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ? ORDER BY "collections"."id" ASC LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Started GET "/users" for 127.0.0.1 at 2020-04-16 08:49:52 -0500
+Processing by UsersController#index as HTML
+Completed 406 Not Acceptable in 5ms (ActiveRecord: 0.0ms | Allocations: 1972)
+
+
+  
+ActionController::MissingExactTemplate (UsersController#index is missing a template for request formats: text/html):
+  
+actionpack (6.0.2.2) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.2.2) lib/abstract_controller/base.rb:196:in `process_action'
+actionpack (6.0.2.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.2.2) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.2.2) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.2.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.2.2) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.2.2) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.2.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.2.2) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.2.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.2.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.2.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.2.2) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.2.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.2.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 08:50:02 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ?[0m  [["user_id", 35]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1104)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms | Allocations: 3378)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% provide(:title, @user.username) %>
+
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+
+
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1> 
+       <h1> Hi <%= @user.username %> ! </h1>
+       <h1> These are your current collections:</h1> 
+       <%= link_to collection.name, @collection_path(collection) %> <br> 
+      </h1>
+    </section>
+  </aside>
+</div>
+
+
+):
+1:    <% provide(:title, @user.username) %>
+2:    
+3:    <% flash.each do |message_type, message| %>
+4:      <div class="alert alert-<%= message_type %>"><%= message %></div>
+5:    <% end %>
+6:    
+7:    
+8:    <div class="row">
+9:      <aside class="col-md-4">
+10:        <section class="user_info">
+11:          <h1> 
+12:           <h1> Hi <%= @user.username %> ! </h1>
+13:           <h1> These are your current collections:</h1> 
+14:           <%= link_to collection.name, @collection_path(collection) %> <br> 
+15:          </h1>
+16:        </section>
+17:      </aside>
+18:    </div>
+  
+app/views/users/show.html.erb:14: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:14: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:14: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:14: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:14: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:14: syntax error, unexpected '(', expecting ')'
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 08:52:29 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ?[0m  [["user_id", 35]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1140)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms | Allocations: 3433)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% provide(:title, @user.username) %>
+
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+
+
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1> 
+       <h1> Hi <%= @user.username %> ! </h1>
+       <h1> These are your current collections:</h1> 
+       <%= link_to collection.name, @collection_path(collection) %> <br> 
+          <%= collection.name, collection_%>
+        <% end %>
+
+       
+      </h1>
+    </section>
+  </aside>
+</div>
+
+
+):
+1:    <% provide(:title, @user.username) %>
+2:    
+3:    <% flash.each do |message_type, message| %>
+4:      <div class="alert alert-<%= message_type %>"><%= message %></div>
+5:    <% end %>
+6:    
+7:    
+8:    <div class="row">
+9:      <aside class="col-md-4">
+10:        <section class="user_info">
+11:          <h1> 
+12:           <h1> Hi <%= @user.username %> ! </h1>
+13:           <h1> These are your current collections:</h1> 
+14:           <%= link_to collection.name, @collection_path(collection) %> <br> 
+15:              <%= collection.name, collection_%>
+16:            <% end %>
+17:    
+18:           
+19:          </h1>
+20:        </section>
+21:      </aside>
+22:    </div>
+  
+app/views/users/show.html.erb:14: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:15: syntax error, unexpected ')', expecting '='
+app/views/users/show.html.erb:16: syntax error, unexpected end, expecting ')'
+app/views/users/show.html.erb:26: syntax error, unexpected end, expecting ')'
+app/views/users/show.html.erb:14: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:15: syntax error, unexpected ')', expecting '='
+app/views/users/show.html.erb:16: syntax error, unexpected end, expecting ')'
+app/views/users/show.html.erb:26: syntax error, unexpected end, expecting ')'
+app/views/users/show.html.erb:14: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:15: syntax error, unexpected ')', expecting '='
+app/views/users/show.html.erb:16: syntax error, unexpected end, expecting ')'
+app/views/users/show.html.erb:26: syntax error, unexpected end, expecting ')'
+app/views/users/show.html.erb:14: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:15: syntax error, unexpected ')', expecting '='
+app/views/users/show.html.erb:16: syntax error, unexpected end, expecting ')'
+app/views/users/show.html.erb:26: syntax error, unexpected end, expecting ')'
+app/views/users/show.html.erb:14: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:15: syntax error, unexpected ')', expecting '='
+app/views/users/show.html.erb:16: syntax error, unexpected end, expecting ')'
+app/views/users/show.html.erb:26: syntax error, unexpected end, expecting ')'
+app/views/users/show.html.erb:14: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:15: syntax error, unexpected ')', expecting '='
+app/views/users/show.html.erb:16: syntax error, unexpected end, expecting ')'
+app/views/users/show.html.erb:26: syntax error, unexpected end, expecting ')'
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 08:53:48 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ?[0m  [["user_id", 35]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1143)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.5ms | Allocations: 3436)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% provide(:title, @user.username) %>
+
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+
+
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1> 
+       <h1> Hi <%= @user.username %> ! </h1>
+       <h1> These are your current collections:</h1> 
+       <% @user.collections.each do |collection| %>
+          <%= link_to collection.name, @collection_path(collection) %> <br> 
+        <% end %>
+      </h1>
+    </section>
+  </aside>
+</div>
+
+
+):
+1:    <% provide(:title, @user.username) %>
+2:    
+3:    <% flash.each do |message_type, message| %>
+4:      <div class="alert alert-<%= message_type %>"><%= message %></div>
+5:    <% end %>
+6:    
+7:    
+8:    <div class="row">
+9:      <aside class="col-md-4">
+10:        <section class="user_info">
+11:          <h1> 
+12:           <h1> Hi <%= @user.username %> ! </h1>
+13:           <h1> These are your current collections:</h1> 
+14:           <% @user.collections.each do |collection| %>
+15:              <%= link_to collection.name, @collection_path(collection) %> <br> 
+16:            <% end %>
+17:          </h1>
+18:        </section>
+19:      </aside>
+20:    </div>
+  
+app/views/users/show.html.erb:15: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:24: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:15: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:24: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:15: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:24: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:15: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:24: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:15: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:24: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:15: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:24: syntax error, unexpected end, expecting end-of-input
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 08:54:11 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ?[0m  [["user_id", 35]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1155)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms | Allocations: 3448)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% provide(:title, @user.username) %>
+
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+
+
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1> 
+       <h1> Hi <%= @user.username %> ! </h1>
+       <h1> These are your current collections:</h1> 
+       <% @user.collections.each do |collection| %>
+       <%binding.pry%>
+          <%= link_to collection.name, @collection_path(collection) %> <br> 
+        <% end %>
+      </h1>
+    </section>
+  </aside>
+</div>
+
+
+):
+1:    <% provide(:title, @user.username) %>
+2:    
+3:    <% flash.each do |message_type, message| %>
+4:      <div class="alert alert-<%= message_type %>"><%= message %></div>
+5:    <% end %>
+6:    
+7:    
+8:    <div class="row">
+9:      <aside class="col-md-4">
+10:        <section class="user_info">
+11:          <h1> 
+12:           <h1> Hi <%= @user.username %> ! </h1>
+13:           <h1> These are your current collections:</h1> 
+14:           <% @user.collections.each do |collection| %>
+15:           <%binding.pry%>
+16:              <%= link_to collection.name, @collection_path(collection) %> <br> 
+17:            <% end %>
+18:          </h1>
+19:        </section>
+20:      </aside>
+21:    </div>
+  
+app/views/users/show.html.erb:16: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:25: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:16: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:25: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:16: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:25: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:16: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:25: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:16: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:25: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:16: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:25: syntax error, unexpected end, expecting end-of-input
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 08:54:32 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1095)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.7ms | Allocations: 7748)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% provide(:title, @user.username) %>
+
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+
+
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1> 
+       <h1> Hi <%= @user.username %> ! </h1>
+       <h1> These are your current collections:</h1> 
+       <% @user.collections.each do |collection| %>
+       <%binding.pry%>
+          <%= link_to collection.name, @collection_path(collection) %> <br> 
+        <% end %>
+      </h1>
+    </section>
+  </aside>
+</div>
+
+
+):
+1:    <% provide(:title, @user.username) %>
+2:    
+3:    <% flash.each do |message_type, message| %>
+4:      <div class="alert alert-<%= message_type %>"><%= message %></div>
+5:    <% end %>
+6:    
+7:    
+8:    <div class="row">
+9:      <aside class="col-md-4">
+10:        <section class="user_info">
+11:          <h1> 
+12:           <h1> Hi <%= @user.username %> ! </h1>
+13:           <h1> These are your current collections:</h1> 
+14:           <% @user.collections.each do |collection| %>
+15:           <%binding.pry%>
+16:              <%= link_to collection.name, @collection_path(collection) %> <br> 
+17:            <% end %>
+18:          </h1>
+19:        </section>
+20:      </aside>
+21:    </div>
+  
+app/views/users/show.html.erb:16: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:25: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:16: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:25: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:16: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:25: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:16: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:25: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:16: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:25: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:16: syntax error, unexpected '(', expecting ')'
+app/views/users/show.html.erb:25: syntax error, unexpected end, expecting end-of-input
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 08:56:50 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCollection Load (0.7ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ?[0m  [["user_id", 35]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (Duration: 5.9ms | Allocations: 3273)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 15.6ms | ActiveRecord: 1.7ms | Allocations: 15216)
+
+
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 08:58:21 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ?[0m  [["user_id", 35]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 935)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.3ms | Allocations: 7408)
+
+
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 08:58:22 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ?[0m  [["user_id", 35]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 676)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.3ms | Allocations: 6111)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-04-16 08:58:24 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 772)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 6241)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-16 08:58:27 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"kP+qqEqWUXcw3O6cy0jj87eTx+iUNXHfsURd4bvNfEbGQ9dcgSBarNhE7+wpS7LTZQcseGrAmRa6K/IrcJTpJA==", "session"=>{"username"=>"pleroo", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "pleroo"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/users/35
+Completed 302 Found in 74ms (ActiveRecord: 0.2ms | Allocations: 1080)
+
+
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 08:58:28 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ?[0m  [["user_id", 35]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 676)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.3ms | Allocations: 6123)
+
+
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 08:58:51 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ?[0m  [["user_id", 35]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 676)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 45.9ms | ActiveRecord: 0.3ms | Allocations: 6107)
+
+
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 08:58:52 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ?[0m  [["user_id", 35]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 676)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.3ms | Allocations: 6112)
+
+
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 08:58:53 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ?[0m  [["user_id", 35]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 676)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 0.3ms | Allocations: 6120)
+
+
+Started GET "/users/35" for 127.0.0.1 at 2020-04-16 09:03:57 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ?[0m  [["user_id", 35]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 676)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.3ms | Allocations: 6110)
+
+
