@@ -8,4 +8,9 @@ class User < ApplicationRecord
     validates :password, length: { in: 6..20 }
     
     has_secure_password   
+
+
+    def self.user_collections(user_id)
+        binding.pry
+    end
 end
