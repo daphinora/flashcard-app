@@ -1,0 +1,8 @@
+<h2>Flashcard information</h2>
+
+<%= "Question: " + @flashcard.question %><br>
+<%= "Answer: " + @flashcard.answer %><br><br>
+
+<%= link_to '<button type="button">Edit Flashcard</button>'.html_safe, "/flashcards/#{@flashcard.id}/edit"%>
+
+<%= link_to '<button type="button">Delete Flashcard</button>'.html_safe, @flashcard.destroy %>
