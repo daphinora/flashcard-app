@@ -1,0 +1,7 @@
+<h2>Flashcards!</h2>
+<h3>Add flashcards to your collection:</h3>
+
+<%# @sorted_flashcards = @flashcards.all.sort_by{|card| card.tags.first} %>
+<% @flashcards.each do |card| %>
+<%= link_to "Question", card %><%= ": " + card.question %><br><%= "Answer: " + card.answer %><br><br>
+<% end %>
