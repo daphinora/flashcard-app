@@ -6709,3 +6709,2686 @@ DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed i
  (called from load at /Users/joshuagauthreaux/.rvm/gems/ruby-2.6.1/bin/rake:23)
 DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
  (called from load at /Users/joshuagauthreaux/.rvm/gems/ruby-2.6.1/bin/rake:23)
+Started POST "/users" for 127.0.0.1 at 2020-04-15 19:45:30 -0500
+  [1m[35m (6.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"Tl/LGWtUgYclnjxCGN9WL7gJQtByYGp4KpPTAvzqcKAY47btoOKKXM0GPTL63AcPap2pQIyVgrEh/HzIN7Plwg==", "user"=>{"username"=>"new", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create an account"}
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "new"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "new"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?)[0m  [["username", "new"], ["created_at", "2020-04-16 00:45:30.525274"], ["updated_at", "2020-04-16 00:45:30.525274"], ["password_digest", "$2a$10$6Pn1BvRWVdwkDSUfTWQYS.FynMt7vKqbfg2Z/yYs2hjPRIR92rPne"]]
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:18:in `create'
+Redirected to http://127.0.0.1:3000/users/34
+Completed 302 Found in 147ms (ActiveRecord: 4.3ms | Allocations: 11931)
+
+
+Started GET "/users/34" for 127.0.0.1 at 2020-04-15 19:45:30 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1205)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/joshuagauthreaux/Development/code/flashcard-app/public/packs
+[Webpacker] Hash: 32e57f147dbdcbbf0c82
+Version: webpack 4.42.1
+Time: 2737ms
+Built at: 04/15/2020 7:45:35 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-bbe9c4a129ab949e0636.js    124 KiB  application  [emitted] [immutable]  application
+js/application-bbe9c4a129ab949e0636.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-bbe9c4a129ab949e0636.js js/application-bbe9c4a129ab949e0636.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 5181ms (Views: 5158.8ms | ActiveRecord: 0.2ms | Allocations: 46202)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:45:49 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/new" for 127.0.0.1 at 2020-04-15 19:45:54 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1363.1ms | Allocations: 787681)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1385ms (Views: 1382.8ms | ActiveRecord: 0.0ms | Allocations: 796335)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-04-15 19:46:04 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"CUM/MsJC4ocrv7latxrV3bk2zW+c8lMbw7oeYt9m/Cdf/0LGCfTpXMMnuCpVGYT9a6Im/2IHu9LI1bGoFD9pRQ==", "user"=>{"username"=>"pleroo", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create an account"}
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "pleroo"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "pleroo"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?)[0m  [["username", "pleroo"], ["created_at", "2020-04-16 00:46:04.102180"], ["updated_at", "2020-04-16 00:46:04.102180"], ["password_digest", "$2a$10$No1LahtbVHQxNxT0iFdCV.Y0DCeJHnUYxRXUJ5gX8koztqiyCmSHC"]]
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:18:in `create'
+Redirected to http://127.0.0.1:3000/users/35
+Completed 302 Found in 82ms (ActiveRecord: 3.2ms | Allocations: 4228)
+
+
+Started GET "/users/35" for 127.0.0.1 at 2020-04-15 19:46:04 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 23)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.1ms | Allocations: 9022)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:46:57 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/rails/info/routes?path=user" for 127.0.0.1 at 2020-04-15 19:47:24 -0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"user"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2031)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:47:40 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:48:07 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:48:22 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:48:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:48:24 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/rails/info/routes?path=user" for 127.0.0.1 at 2020-04-15 19:48:29 -0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"user"}
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1992)
+
+
+Started GET "/rails/info/routes?path=users" for 127.0.0.1 at 2020-04-15 19:48:30 -0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"users"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 911)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:48:47 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:48:48 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:48:49 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:13 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /Users/joshuagauthreaux/.rvm/gems/ruby-2.6.1/bin/rake:23)
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:44 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms | Allocations: 421)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:44 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:44 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:44 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 275)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:44 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 271)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:44 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:44 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 275)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:44 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:44 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 275)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:44 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:44 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:44 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 277)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:44 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:44 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 267)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:44 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:44 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:44 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:44 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:44 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 271)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:44 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:45 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:45 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:45 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 279)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:45 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 275)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:45 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 271)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:45 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:45 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:45 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 278)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:45 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:45 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 277)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:45 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:45 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:45 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 275)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:45 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:45 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 271)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:45 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:45 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 267)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:45 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 271)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:45 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:45 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:46 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:46 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:46 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 275)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:46 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 267)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:46 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:46 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:46 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 277)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:46 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:46 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 267)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:46 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:46 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 271)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:46 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 277)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:46 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 278)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:46 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 275)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:46 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:46 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:46 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:46 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:46 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:46 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:53 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 279)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:53 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 280)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:53 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 280)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:53 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 271)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:53 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 278)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:53 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 269)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:53 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 269)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:53 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:53 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 271)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:53 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 275)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:53 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 268)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:53 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 278)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:53 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:53 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:53 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:53 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:53 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:53 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:53 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:53 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 279)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 268)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 277)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 277)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 275)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 278)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 271)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 284)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 277)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 271)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 269)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 269)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 271)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 277)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 271)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 275)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:54 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:56 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 271)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:56 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 279)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:56 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:56 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:56 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:56 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:56 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:56 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:56 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 271)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:56 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:56 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:56 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:56 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 268)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:56 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:56 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 279)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:56 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 268)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:56 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:56 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 279)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:56 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 267)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:49:56 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 277)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:22 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:22 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:22 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 268)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:22 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:22 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:22 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:22 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:22 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 278)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:22 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:22 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:22 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:22 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 277)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:22 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:22 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:22 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 275)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:22 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:22 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 269)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:22 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:22 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:22 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 269)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:23 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 268)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:23 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:23 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:23 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 271)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:23 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:23 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 280)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:23 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:23 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 275)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:23 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:23 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:23 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:23 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:23 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 269)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:23 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 269)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:23 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 271)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:23 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 279)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:23 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 275)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:23 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 275)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:23 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:50:23 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 275)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:05 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms | Allocations: 427)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:05 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 275)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:05 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:05 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:05 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:05 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:05 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:05 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:05 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 271)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:05 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 278)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:05 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 279)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:05 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:05 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:05 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 268)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:05 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:05 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:05 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:05 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:05 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 269)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:05 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 278)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:10 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:10 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 280)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:10 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 275)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:10 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:10 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:10 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:10 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 277)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 275)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 269)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 275)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 269)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 281)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 271)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 267)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 277)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 269)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 275)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 267)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 271)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 279)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 267)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 268)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:11 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-04-15 19:51:17 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 176.0ms | Allocations: 182514)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 263ms (Views: 246.1ms | ActiveRecord: 0.8ms | Allocations: 211434)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-04-15 19:51:20 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 674)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 9182)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-04-15 19:51:21 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 667)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 9170)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-04-15 19:51:22 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 667)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms | Allocations: 9164)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-04-15 19:51:22 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 667)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 9168)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-04-15 19:51:30 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"+QJ4fMoHPAcyTenJ5UBlCQGPnJfnpmpwrL7zLtnbcZSvvgWIAbE33NrV6LkHQzQp0xt3BxlTgrmn0VzkEoLk9g==", "user"=>{"username"=>"sfdsf", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create an account"}
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "sfdsf"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "sfdsf"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?)[0m  [["username", "sfdsf"], ["created_at", "2020-04-16 00:51:30.316609"], ["updated_at", "2020-04-16 00:51:30.316609"], ["password_digest", "$2a$10$DnInV1.TYDQgEqKcVKGoN.WnunbFiExXfPwkGU1m8O1os.j2w6s/i"]]
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:18:in `create'
+Redirected to http://127.0.0.1:3000/users/36
+Completed 302 Found in 84ms (ActiveRecord: 3.5ms | Allocations: 5061)
+
+
+Started GET "/users/36" for 127.0.0.1 at 2020-04-15 19:51:30 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 220)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 13.4ms | ActiveRecord: 0.3ms | Allocations: 9515)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:33 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:34 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:34 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:34 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 271)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:34 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 277)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:34 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:34 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:34 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:34 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:34 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 277)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:34 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:34 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:34 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:34 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 267)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:34 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 269)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:34 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 279)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:34 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:34 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:34 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:34 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:34 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 279)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:36 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:36 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:36 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:36 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:36 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:36 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:36 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:36 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:36 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 268)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:36 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:36 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:36 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:36 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:36 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 271)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:36 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:36 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 267)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:36 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:36 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 275)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:36 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:51:36 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 267)
+
+
+Started GET "/rails/info/routes?path=users" for 127.0.0.1 at 2020-04-15 19:51:59 -0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"users"}
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 2132)
+
+
+Started GET "/rails/routes" for 127.0.0.1 at 2020-04-15 19:58:44 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/rails/routes"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2020-04-15 19:58:50 -0500
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 281)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-04-15 19:58:50 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1104)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 15584)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-04-15 19:58:57 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 673)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.0ms | Allocations: 9174)
+
+
+Started GET "/lovin" for 127.0.0.1 at 2020-04-15 20:08:24 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/lovin"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/rails/info/routes?path=login" for 127.0.0.1 at 2020-04-15 20:08:29 -0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"login"}
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1955)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-04-15 20:08:38 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 705)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 0.0ms | Allocations: 10079)
+
+
+Started GET "/signup" for 127.0.0.1 at 2020-04-15 20:08:44 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1051)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 63.8ms | ActiveRecord: 0.0ms | Allocations: 10128)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-15 20:09:05 -0500
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for SessionsController):
+  
+actionpack (6.0.2.2) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.2.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.2.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/login" for 127.0.0.1 at 2020-04-15 20:11:20 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"XLunCvyHmE9kIVknY3JbZMfwY0Eu2sC6dnP0ftPBof8KB9r+NzGTlIy5WFeBcQpEFWSI0dAvKHN9HFu0GJg0nQ==", "session"=>{"username"=>"pleroo", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 439)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 9043)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-15 20:15:31 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/joshuagauthreaux/Development/code/flashcard-app/app/controllers/sessions_controller.rb:14: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/sessions_controller.rb:14: syntax error, unexpected end-of-input, expecting end
+app/controllers/sessions_controller.rb:14: syntax error, unexpected end-of-input, expecting end
+app/controllers/sessions_controller.rb:14: syntax error, unexpected end-of-input, expecting end
+Started GET "/login" for 127.0.0.1 at 2020-04-15 20:16:38 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 443)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 9042)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-15 20:16:43 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"AW0V4E6McEahL2oqtypve/2VOxJVPCB4vDsSFb6GyUpX0WgUhTp7nUm3a1pVKT5bLwHQgqvJyLG3VL3fdd9cKA==", "session"=>{"username"=>"pleroo", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "pleroo"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 106644ms (ActiveRecord: 1.7ms | Allocations: 145984)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-04-15 20:18:38 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 434)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms | Allocations: 8911)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-15 20:18:51 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"5Q4QVPOqkwZ5iyqxiLHVc74BflzU0UYWAaJ5IstOY0Ozsm2gOByY3ZETK8FqsoRTbJWVzCokrt8KzdboABf2IQ==", "session"=>{"username"=>"pleroo", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "pleroo"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 5784ms (ActiveRecord: 0.2ms | Allocations: 13674)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-04-15 20:19:01 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 443)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms | Allocations: 9039)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-15 20:19:05 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"kVtOtOs3O/fZlctMXmdGVzzubaDdY5/CWS0rDRaSx3HH5zNAIIEwLDENyjy8ZBd37nqGMCOWdwtSQoTH3ctSEw==", "session"=>{"username"=>"pleroo", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "pleroo"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 84ms (ActiveRecord: 1.0ms | Allocations: 6397)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2020-04-15 20:23:50 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 778)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms | Allocations: 10156)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-15 20:23:53 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"S1qIoovrNWxdgednSWc6hQAKt5yhQhcQfs9l60WvBowd5vVWQF0+t7UZ5herZGul0p5cDF+3/9l1oMohjvaT7g==", "session"=>{"username"=>"xcv", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "xcv"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 17ms (ActiveRecord: 1.2ms | Allocations: 4811)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-04-15 20:25:04 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 455)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms | Allocations: 8955)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-15 20:25:10 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"5tR3jqKYe9rXmFvPLR6EqzituPCiWUA//wMz5tBl/s+waAp6aS5wAT8AWr/PHdWL6jlTYFysqPb0bJwsGzxrrQ==", "session"=>{"username"=>"pleroo", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "pleroo"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 76ms (ActiveRecord: 0.7ms | Allocations: 3685)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-04-15 20:25:13 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 446)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms | Allocations: 8928)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-15 20:25:18 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"rJ7YfOORyLiLQO4SSy0nznQ/z9AzEDhbDL6NKlWnRbv6IqWIKCfDY2PY72KpLnbupqskQM3l0JIH0SLgnv7Q2Q==", "session"=>{"username"=>"pleroo", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "pleroo"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 72ms (ActiveRecord: 0.3ms | Allocations: 867)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-04-15 20:25:20 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 446)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 8922)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-04-15 20:25:22 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 446)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.0ms | Allocations: 8925)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-15 20:25:26 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"MLsotZx4tc+IbsvZCWzLu2X+UY0mNfCAOLm3I6/hPX1mB1VBV86+FGD2yqnrb5qbt2q6HdjAGEkz1hjpZLioHw==", "session"=>{"username"=>"kdkdk", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kdkdk"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.2ms | Allocations: 845)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-04-15 20:25:45 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 458)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 57.8ms | ActiveRecord: 0.0ms | Allocations: 9082)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-04-15 20:25:49 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 446)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 8930)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-15 20:25:52 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"9aPYwYClAM0K9EUHlnhWKzdqTTFtEU2YsmX/6ahGm9CjH6U1SxMLFuJsRHd0ewcL5f6moZPkpVG5ClAjYx8Osg==", "session"=>{"username"=>"okerii", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "okerii"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 434)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 13.7ms | ActiveRecord: 0.5ms | Allocations: 12103)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-04-15 20:27:23 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 778)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 10211)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-04-15 20:27:52 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 772)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms | Allocations: 10186)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-04-15 20:28:13 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 773)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms | Allocations: 10193)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-04-15 20:28:54 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 773)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 10186)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-04-15 20:29:23 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 452)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 8931)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-15 20:29:27 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"7MgNxZnWRBrYr2CbQbIRh44xltR4LLYTsXRlal+pdBq6dHAxUmBPwTA3YeujsUCnXKV9RIbZXtq6G8qglPDheA==", "session"=>{"username"=>"fcdsaf", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "fcdsaf"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 434)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.2ms | Allocations: 9430)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-04-15 20:30:24 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 458)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.0ms | Allocations: 9068)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-04-15 20:30:26 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 446)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 8921)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-15 20:30:31 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"0Of+DvvHtxlgS1YkHpxryslKnoZkMkRmW/M5/Tgd042GW4P6MHG8wojTV1T8nzrqG951FprHrK9QnJY380RG7w==", "session"=>{"username"=>"wrong", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "wrong"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 434)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 14.6ms | ActiveRecord: 0.6ms | Allocations: 12112)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-15 20:30:37 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"nVqbQN9fnyGn3Tdtvfq91aVi+URvq/NjGTJwGv7YXhbL5ua0FOmU+k9FNh1f+ez1d/YS1JFeG6oSXd/QNYHLdA==", "session"=>{"username"=>"pleroo", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "pleroo"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 73ms (ActiveRecord: 0.8ms | Allocations: 5022)
+
+
