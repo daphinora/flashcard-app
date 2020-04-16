@@ -7,11 +7,11 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
   # resources :card_collections
-  resources :collections, only: [:index, :show, :new] 
+  resources :collections
   # resources :tagged_cards
   # resources :tags
   # resources :user_cards
-  resources :flashcards, only: [:index, :show, :new, :edit]
+  resources :flashcards
   resources :users
   # , only: [:show, :new, :edit, :create, :update]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

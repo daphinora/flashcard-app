@@ -1,0 +1,14 @@
+<h2>Create A New Collection</h2>
+<p>What do you want your new collection to be called?</p>
+<%= form_for(@collection) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.submit "Create Collection!"%>
+<% end %>
+
+<%# f.hidden_field :user_id, value: current_user.id  %>
+
+<%# use sessions in the form to let the app know that when the user creates a collection it should be added to their collections %>
+
+<%# link_to '<button type="button">My Collections</button>'.html_safe, "/users/#{@collection.user_id}" %>
+<%# this needs to use sessions to know what the current user's id is ^^ %>

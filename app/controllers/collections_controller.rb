@@ -13,8 +13,9 @@ class CollectionsController < ApplicationController
 
     def create
         @collection = Collection.new(collection_params)
+        @collection.user = current_user
         @collection.save
-        redirect_to collection_path(@collection)
+        redirect_to collection_path(@collection.id)
     end
 
     private
