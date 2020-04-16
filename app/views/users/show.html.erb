@@ -8,13 +8,20 @@
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
-      <h1> 
-       <h1> Hi <%= @user.username %> ! </h1>
-       <h1> These are your current collections:</h1> 
+      
+       <h1> Hi <%= @user.username %>! </h1>
+       <%= link_to '<button type="button">Create New Collection</button>'.html_safe, new_collection_path %>
+
+       <%= link_to '<button type="button"> View Everyone\'s collections </button>'.html_safe, collections_path %>
+
+       <%= link_to '<button type="button">View List of All Flashcards</button>'.html_safe, flashcards_path %>
+
+       <h1> These are your current collections:
+       <ul>
        <% @user.collections.each do |collection| %>
-       <% binding.pry %>
-          <%= collection.name %> <br> 
+          <li><%= link_to collection.name, collection_path(collection) %><br> 
         <% end %>
+        </ul>
       </h1>
     </section>
   </aside>

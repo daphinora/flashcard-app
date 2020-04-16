@@ -16,7 +16,7 @@ class UsersController < ApplicationController
         # binding.pry
         if @user.valid?
             @user.save
-            flash[:success] = "Welcome!, now let's get FLASHIN"
+            flash[:success] = "Welcome!, now let's get FLASHIN'"
             redirect_to user_path(@user)
         else
           render 'new'
