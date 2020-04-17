@@ -5,4 +5,7 @@
 
 <%= link_to '<button type="button">Edit Flashcard</button>'.html_safe, "/flashcards/#{@flashcard.id}/edit"%>
 
-<%= link_to '<button type="button">Delete Flashcard</button>'.html_safe, @flashcard.destroy %>
+
+<%= link_to '<button type="button">DESTROY FLASHCARD</button>'.html_safe, flashcard_path(@flashcard),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>

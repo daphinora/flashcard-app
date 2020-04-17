@@ -16073,6 +16073,8 @@ Processing by CollectionsController#new as HTML
 Completed 200 OK in 206ms (Views: 202.1ms | ActiveRecord: 0.3ms | Allocations: 188091)
 
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Started GET "/flashcards" for ::1 at 2020-04-16 15:30:53 -0500
   [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -17035,5 +17037,909 @@ Processing by FlashcardsController#edit as HTML
 [Webpacker] Everything's up-to-date. Nothing to do
   Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 6)
 Completed 200 OK in 16ms (Views: 12.3ms | ActiveRecord: 0.3ms | Allocations: 5820)
+=======
+=======
+>>>>>>> Stashed changes
+Started GET "/static_page/home" for 127.0.0.1 at 2020-04-16 16:14:44 -0500
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPageController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering static_page/home.html.erb within layouts/application
+  Rendered static_page/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 542)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 1.0ms | Allocations: 97)
+Completed 200 OK in 174ms (Views: 148.1ms | ActiveRecord: 0.7ms | Allocations: 26250)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+
+
+  [1m[35m (7.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Ronan"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Mafalda Hopkirk"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Great Aunt Muriel"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Mr. Borgin"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Filius Flitwick"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Magorian"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Marcus Belby"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Frank Bryce"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Create (6.2ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "How many countries are inside the United Kingdom?"], ["answer", "Four"], ["created_at", "2020-04-16 21:45:09.504789"], ["updated_at", "2020-04-16 21:45:09.504789"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Create (0.6ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "The land of Gotland is located in which European country?"], ["answer", "Sweden"], ["created_at", "2020-04-16 21:45:09.524195"], ["updated_at", "2020-04-16 21:45:09.524195"]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Create (1.2ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "The ancient Roman god of war was commonly known as which of the following?"], ["answer", "Mars"], ["created_at", "2020-04-16 21:45:09.538493"], ["updated_at", "2020-04-16 21:45:09.538493"]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Create (1.6ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "Who in Greek mythology, who led the Argonauts in search of the Golden Fleece?"], ["answer", "Jason"], ["created_at", "2020-04-16 21:45:09.557668"], ["updated_at", "2020-04-16 21:45:09.557668"]]
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Create (4.2ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "Which figure from Greek mythology traveled to the underworld to return his wife Eurydice to the land of the living?"], ["answer", "Four"], ["created_at", "2020-04-16 21:45:09.593159"], ["updated_at", "2020-04-16 21:45:09.593159"]]
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Create (10.4ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "Who is the Egyptian god of reproduction and lettuce?"], ["answer", "Min"], ["created_at", "2020-04-16 21:45:09.663755"], ["updated_at", "2020-04-16 21:45:09.663755"]]
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Create (0.6ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "A carnivorous animal eats flesh, what does a nucivorous animal eat?"], ["answer", "nuts"], ["created_at", "2020-04-16 21:45:09.871413"], ["updated_at", "2020-04-16 21:45:09.871413"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Create (1.9ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "What type of animal is a natterjack?"], ["answer", "Toad"], ["created_at", "2020-04-16 21:45:09.895658"], ["updated_at", "2020-04-16 21:45:09.895658"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (3.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Create (0.7ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "The Kākāpō is a large, flightless, nocturnal parrot native to which country?"], ["answer", "New Zealand"], ["created_at", "2020-04-16 21:45:09.951591"], ["updated_at", "2020-04-16 21:45:09.951591"]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Create (0.5ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "Hippocampus is the Latin name for which marine creature?"], ["answer", "Seahorse"], ["created_at", "2020-04-16 21:45:10.160126"], ["updated_at", "2020-04-16 21:45:10.160126"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (2.8ms)[0m  [1m[32mINSERT INTO "tags" ("category", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["category", "History"], ["created_at", "2020-04-16 21:45:10.711215"], ["updated_at", "2020-04-16 21:45:10.711215"]]
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.6ms)[0m  [1m[32mINSERT INTO "tags" ("category", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["category", "Entertainment: Video Games"], ["created_at", "2020-04-16 21:45:11.121223"], ["updated_at", "2020-04-16 21:45:11.121223"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.6ms)[0m  [1m[32mINSERT INTO "tags" ("category", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["category", "Geography"], ["created_at", "2020-04-16 21:45:11.515295"], ["updated_at", "2020-04-16 21:45:11.515295"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("category", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["category", "General Knowledge"], ["created_at", "2020-04-16 21:45:12.054051"], ["updated_at", "2020-04-16 21:45:12.054051"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCollection Create (0.4ms)[0m  [1m[32mINSERT INTO "collections" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["name", "Greek Mythology"], ["created_at", "2020-04-16 21:45:12.121115"], ["updated_at", "2020-04-16 21:45:12.121115"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCollection Create (0.4ms)[0m  [1m[32mINSERT INTO "collections" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["name", "Animals"], ["created_at", "2020-04-16 21:45:12.140194"], ["updated_at", "2020-04-16 21:45:12.140194"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCollection Create (0.4ms)[0m  [1m[32mINSERT INTO "collections" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["name", "Geography"], ["created_at", "2020-04-16 21:45:12.152537"], ["updated_at", "2020-04-16 21:45:12.152537"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Reginald Cattermole"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Harry Potter"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Petunia Dursley"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Augusta Longbottom"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Fridwulfa"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Gellert Grindelwald"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Garrick Ollivander"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Goyle Sr."], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Create (0.5ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "How many countries are inside the United Kingdom?"], ["answer", "Four"], ["created_at", "2020-04-16 22:43:01.424704"], ["updated_at", "2020-04-16 22:43:01.424704"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Create (0.4ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "The land of Gotland is located in which European country?"], ["answer", "Sweden"], ["created_at", "2020-04-16 22:43:01.431051"], ["updated_at", "2020-04-16 22:43:01.431051"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Create (0.6ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "The ancient Roman god of war was commonly known as which of the following?"], ["answer", "Mars"], ["created_at", "2020-04-16 22:43:01.436018"], ["updated_at", "2020-04-16 22:43:01.436018"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Create (0.3ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "Who in Greek mythology, who led the Argonauts in search of the Golden Fleece?"], ["answer", "Jason"], ["created_at", "2020-04-16 22:43:01.442362"], ["updated_at", "2020-04-16 22:43:01.442362"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Create (0.4ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "Which figure from Greek mythology traveled to the underworld to return his wife Eurydice to the land of the living?"], ["answer", "Four"], ["created_at", "2020-04-16 22:43:01.447272"], ["updated_at", "2020-04-16 22:43:01.447272"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Create (0.3ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "Who is the Egyptian god of reproduction and lettuce?"], ["answer", "Min"], ["created_at", "2020-04-16 22:43:01.452655"], ["updated_at", "2020-04-16 22:43:01.452655"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Create (0.3ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "A carnivorous animal eats flesh, what does a nucivorous animal eat?"], ["answer", "nuts"], ["created_at", "2020-04-16 22:43:01.457435"], ["updated_at", "2020-04-16 22:43:01.457435"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Create (0.6ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "What type of animal is a natterjack?"], ["answer", "Toad"], ["created_at", "2020-04-16 22:43:01.462939"], ["updated_at", "2020-04-16 22:43:01.462939"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Create (0.4ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "The Kākāpō is a large, flightless, nocturnal parrot native to which country?"], ["answer", "New Zealand"], ["created_at", "2020-04-16 22:43:01.469154"], ["updated_at", "2020-04-16 22:43:01.469154"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFlashcard Create (0.7ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "Hippocampus is the Latin name for which marine creature?"], ["answer", "Seahorse"], ["created_at", "2020-04-16 22:43:01.474048"], ["updated_at", "2020-04-16 22:43:01.474048"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("category", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["category", "Entertainment: Books"], ["created_at", "2020-04-16 22:43:02.233232"], ["updated_at", "2020-04-16 22:43:02.233232"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("category", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["category", "General Knowledge"], ["created_at", "2020-04-16 22:43:02.798330"], ["updated_at", "2020-04-16 22:43:02.798330"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.6ms)[0m  [1m[32mINSERT INTO "tags" ("category", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["category", "Entertainment: Video Games"], ["created_at", "2020-04-16 22:43:03.365196"], ["updated_at", "2020-04-16 22:43:03.365196"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("category", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["category", "Geography"], ["created_at", "2020-04-16 22:43:03.993828"], ["updated_at", "2020-04-16 22:43:03.993828"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCollection Create (0.5ms)[0m  [1m[32mINSERT INTO "collections" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["name", "Greek Mythology"], ["created_at", "2020-04-16 22:43:04.025316"], ["updated_at", "2020-04-16 22:43:04.025316"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCollection Create (0.4ms)[0m  [1m[32mINSERT INTO "collections" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["name", "Animals"], ["created_at", "2020-04-16 22:43:04.031914"], ["updated_at", "2020-04-16 22:43:04.031914"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCollection Create (0.4ms)[0m  [1m[32mINSERT INTO "collections" ("user_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["name", "Geography"], ["created_at", "2020-04-16 22:43:04.039909"], ["updated_at", "2020-04-16 22:43:04.039909"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 18:50:17 -0500
+  [1m[35m (6.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FlashcardsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering flashcards/new.html.erb within layouts/application
+  Rendered flashcards/new.html.erb within layouts/application (Duration: 414.7ms | Allocations: 185377)
+Completed 500 Internal Server Error in 23433ms (ActiveRecord: 1.6ms | Allocations: 232262)
+
+
+  
+ActionView::Template::Error (undefined method `collection_id' for #<Flashcard:0x00007fe1d05c06e8>
+Did you mean?  collection_ids
+               collection_ids=
+               collections
+               collections=):
+    15:         <%= f.text_field :answer %>
+    16: 
+    17:         <%= f.label :collection %>
+    18:         <%= f.collection_select(:collection_id, Collection.all, :id, :name, prompt: true) %>
+    19: 
+    20:         <%= f.submit %>
+    21: 
+  
+app/views/flashcards/new.html.erb:18
+app/views/flashcards/new.html.erb:10
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 18:50:48 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by FlashcardsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering flashcards/new.html.erb within layouts/application
+  Rendered flashcards/new.html.erb within layouts/application (Duration: 13.4ms | Allocations: 3331)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 1.9ms | Allocations: 27075)
+
+
+  
+ActionView::Template::Error (undefined method `collection_id' for #<Flashcard:0x00007fe1cfc597a8>
+Did you mean?  collection_ids
+               collection_ids=
+               collections
+               collections=):
+    15:         <%= f.text_field :answer %>
+    16: 
+    17:         <%= f.label :collection %>
+    18:         <%= f.collection_select(:collection_id, Collection.all, :id, :name, prompt: true) %>
+    19: 
+    20:         <%= f.submit %>
+    21: 
+  
+app/views/flashcards/new.html.erb:18
+app/views/flashcards/new.html.erb:10
+Started GET "/flashcards" for 127.0.0.1 at 2020-04-16 18:50:56 -0500
+Processing by FlashcardsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering flashcards/index.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.3ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards"[0m
+  ↳ app/views/flashcards/index.html.erb:5
+  Rendered flashcards/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1319)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 92)
+Completed 200 OK in 260ms (Views: 255.6ms | ActiveRecord: 0.5ms | Allocations: 42768)
+
+
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 18:51:02 -0500
+Processing by FlashcardsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering flashcards/new.html.erb within layouts/application
+  Rendered flashcards/new.html.erb within layouts/application (Duration: 12.3ms | Allocations: 3241)
+Completed 500 Internal Server Error in 239641ms (ActiveRecord: 0.2ms | Allocations: 128531)
+
+
+  
+ActionView::Template::Error (undefined method `collection_id' for #<Flashcard:0x00007fe1d144f6a0>
+Did you mean?  collection_ids
+               collection_ids=
+               collections
+               collections=):
+    15:         <%= f.text_field :answer %>
+    16: 
+    17:         <%= f.label :collection %>
+    18:         <%= f.collection_select(:collection_id, Collection.all, :id, :name, prompt: true) %>
+    19: 
+    20:         <%= f.submit %>
+    21: 
+  
+app/views/flashcards/new.html.erb:18
+app/views/flashcards/new.html.erb:10
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 18:55:05 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by FlashcardsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 1.8ms | Allocations: 14501)
+
+
+  
+NoMethodError (undefined method `user=' for #<Flashcard:0x00007fe1d53ac550>
+Did you mean?  users=
+               users):
+  
+app/controllers/flashcards_controller.rb:13:in `new'
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 18:56:26 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by FlashcardsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 1.5ms | Allocations: 14374)
+
+
+  
+NoMethodError (undefined method `flashcard_id' for #<User:0x00007fe1d532c8f0>
+Did you mean?  flashcard_ids
+               flashcard_ids=
+               flashcards
+               flashcards=):
+  
+app/controllers/flashcards_controller.rb:13:in `new'
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 19:04:16 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/joshuagauthreaux/Development/code/flashcard-app/app/controllers/flashcards_controller.rb:49: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/flashcards_controller.rb:49: syntax error, unexpected end, expecting end-of-input
+app/controllers/flashcards_controller.rb:49: syntax error, unexpected end, expecting end-of-input
+app/controllers/flashcards_controller.rb:49: syntax error, unexpected end, expecting end-of-input
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 19:04:27 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by FlashcardsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" ORDER BY "collections"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ (pry):5:in `new'
+  [1m[36mCollection Load (0.8ms)[0m  [1m[34mSELECT "collections".* FROM "collections"[0m
+  ↳ app/controllers/flashcards_controller.rb:13:in `new'
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ (pry):7:in `new'
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ? LIMIT ?[0m  [["user_id", 35], ["LIMIT", 11]]
+  ↳ app/controllers/flashcards_controller.rb:16:in `new'
+  [1m[36mCACHE Collection Load (0.0ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ? LIMIT ?[0m  [["user_id", 35], ["LIMIT", 11]]
+  ↳ app/controllers/flashcards_controller.rb:16:in `new'
+  Rendering flashcards/new.html.erb within layouts/application
+  Rendered flashcards/new.html.erb within layouts/application (Duration: 16.0ms | Allocations: 3327)
+Completed 500 Internal Server Error in 7414337ms (ActiveRecord: 3.6ms | Allocations: 212546)
+
+
+  
+ActionView::Template::Error (undefined method `collection_id' for #<Flashcard:0x00007fe1cfde6670>
+Did you mean?  collection_ids
+               collection_ids=
+               collections
+               collections=):
+    15:         <%= f.text_field :answer %>
+    16: 
+    17:         <%= f.label :collection %>
+    18:         <%= f.collection_select(:collection_id, Collection.all, :id, :name, prompt: true) %>
+    19: 
+    20:         <%= f.submit %>
+    21: 
+  
+app/views/flashcards/new.html.erb:18
+app/views/flashcards/new.html.erb:10
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 21:08:08 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by FlashcardsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 1.3ms | Allocations: 17979)
+
+
+  
+NoMethodError (undefined method `each' for #<Class:0x00007fe1d16773b0>):
+  
+app/controllers/flashcards_controller.rb:19:in `new'
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 21:08:24 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by FlashcardsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections"[0m
+  ↳ app/controllers/flashcards_controller.rb:19:in `new'
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ? LIMIT ?[0m  [["user_id", 35], ["LIMIT", 11]]
+  ↳ app/controllers/flashcards_controller.rb:20:in `block in new'
+  [1m[36mCACHE Collection Load (0.0ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ? LIMIT ?[0m  [["user_id", 35], ["LIMIT", 11]]
+  ↳ app/controllers/flashcards_controller.rb:20:in `block in new'
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 21:11:54 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FlashcardsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections"[0m
+  ↳ app/controllers/flashcards_controller.rb:19:in `new'
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 21:12:02 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by FlashcardsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections"[0m
+  ↳ app/controllers/flashcards_controller.rb:19:in `new'
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ?[0m  [["user_id", 35]]
+  ↳ app/controllers/flashcards_controller.rb:24:in `new'
+  [1m[36mFlashcard Load (0.3ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" ORDER BY "flashcards"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ (pry):4:in `new'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_cards" ON "users"."id" = "user_cards"."user_id" WHERE "user_cards"."flashcard_id" = ?[0m  [["flashcard_id", 40]]
+  ↳ app/controllers/flashcards_controller.rb:24:in `new'
+  [1m[36mCACHE Flashcard Load (0.0ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" ORDER BY "flashcards"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ (pry):6:in `new'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_cards" ON "users"."id" = "user_cards"."user_id" WHERE "user_cards"."flashcard_id" = ?[0m  [["flashcard_id", 40]]
+  ↳ app/controllers/flashcards_controller.rb:24:in `new'
+  [1m[36mCACHE Flashcard Load (0.0ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" ORDER BY "flashcards"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ (pry):7:in `new'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ (pry):7:in `new'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):7:in `new'
+  [1m[36mUserCard Create (0.8ms)[0m  [1m[32mINSERT INTO "user_cards" ("flashcard_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["flashcard_id", 40], ["user_id", 1], ["created_at", "2020-04-17 02:13:50.661854"], ["updated_at", "2020-04-17 02:13:50.661854"]]
+  ↳ (pry):7:in `new'
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):7:in `new'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_cards" ON "users"."id" = "user_cards"."user_id" WHERE "user_cards"."flashcard_id" = ?[0m  [["flashcard_id", 40]]
+  ↳ app/controllers/flashcards_controller.rb:24:in `new'
+  [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" ORDER BY "flashcards"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ (pry):8:in `new'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_cards" ON "users"."id" = "user_cards"."user_id" WHERE "user_cards"."flashcard_id" = ?[0m  [["flashcard_id", 40]]
+  ↳ app/controllers/flashcards_controller.rb:24:in `new'
+  Rendering flashcards/new.html.erb within layouts/application
+  Rendered flashcards/new.html.erb within layouts/application (Duration: 142893.8ms | Allocations: 502795)
+Completed 500 Internal Server Error in 958863ms (ActiveRecord: 6.6ms | Allocations: 598288)
+
+
+  
+ActionView::Template::Error (undefined method `collection_id' for #<Flashcard:0x00007f81951a7340>
+Did you mean?  collection_ids
+               collection_ids=
+               collections
+               collections=):
+    15:         <%= f.text_field :answer %>
+    16:         <% binding.pry %>
+    17:         <%= f.label :collection %>
+    18:         <%= f.collection_select(:collection_id, Collection.all, :id, :name, prompt: true) %>
+    19:         <% binding.pry %>
+    20:         <%= f.submit %>
+    21: 
+  
+app/views/flashcards/new.html.erb:18
+app/views/flashcards/new.html.erb:10
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 21:28:32 -0500
+  [1m[36mCollection Load (2.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ? LIMIT ?[0m  [["user_id", 35], ["LIMIT", 11]]
+  ↳ app/controllers/flashcards_controller.rb:24:in `new'
+  [1m[36mCACHE Collection Load (0.0ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ? LIMIT ?[0m  [["user_id", 35], ["LIMIT", 11]]
+  ↳ app/controllers/flashcards_controller.rb:24:in `new'
+  Rendering flashcards/new.html.erb within layouts/application
+  Rendered flashcards/new.html.erb within layouts/application (Duration: 1733.9ms | Allocations: 24658)
+Completed 500 Internal Server Error in 1029263ms (ActiveRecord: 4.7ms | Allocations: 1201742)
+
+
+  
+ActionView::Template::Error (undefined method `collection_id' for #<Flashcard:0x00007f8195354850>
+Did you mean?  collection_ids
+               collection_ids=
+               collections
+               collections=):
+    15:         <%= f.text_field :answer %>
+    16:         <% binding.pry %>
+    17:         <%= f.label :collection %>
+    18:         <%= f.collection_select(:collection_id, Collection.all, :id, :name, prompt: true) %>
+    19:         <% binding.pry %>
+    20:         <%= f.submit %>
+    21: 
+  
+app/views/flashcards/new.html.erb:18
+app/views/flashcards/new.html.erb:10
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by FlashcardsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections"[0m
+  ↳ app/controllers/flashcards_controller.rb:14:in `new'
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 2.4ms | Allocations: 19148)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (User(#70097293354900) expected, got 35 which is an instance of Integer(#70097234639960)):
+  
+app/controllers/flashcards_controller.rb:19:in `new'
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 21:29:34 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by FlashcardsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 1.9ms | Allocations: 14098)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (User(#70097245555500) expected, got 35 which is an instance of Integer(#70097234639960)):
+  
+app/controllers/flashcards_controller.rb:19:in `new'
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 21:29:43 -0500
+Processing by FlashcardsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms | Allocations: 1199)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (User(#70097245555500) expected, got 35 which is an instance of Integer(#70097234639960)):
+  
+app/controllers/flashcards_controller.rb:19:in `new'
+Started GET "/flashcards/40" for 127.0.0.1 at 2020-04-16 21:29:50 -0500
+Processing by FlashcardsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mFlashcard Load (0.9ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" WHERE "flashcards"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/flashcards_controller.rb:7:in `show'
+  Rendering flashcards/show.html.erb within layouts/application
+  Rendered flashcards/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 272)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 92)
+Completed 200 OK in 248ms (Views: 239.5ms | ActiveRecord: 1.2ms | Allocations: 24029)
+
+
+Started GET "/flashcards/40/edit" for 127.0.0.1 at 2020-04-16 21:29:54 -0500
+Processing by FlashcardsController#edit as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" WHERE "flashcards"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/flashcards_controller.rb:29:in `edit'
+  Rendering flashcards/edit.html.erb within layouts/application
+  Rendered flashcards/edit.html.erb within layouts/application (Duration: 5.7ms | Allocations: 980)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 28ms (Views: 21.4ms | ActiveRecord: 0.5ms | Allocations: 10664)
+
+
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 21:30:04 -0500
+Processing by FlashcardsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms | Allocations: 1197)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (User(#70097245555500) expected, got 35 which is an instance of Integer(#70097234639960)):
+  
+app/controllers/flashcards_controller.rb:19:in `new'
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 21:30:23 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by FlashcardsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 2.4ms | Allocations: 24422)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (User(#70097283853000) expected, got 35 which is an instance of Integer(#70097234639960)):
+  
+app/controllers/flashcards_controller.rb:21:in `new'
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 21:31:02 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by FlashcardsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering flashcards/new.html.erb within layouts/application
+  Rendered flashcards/new.html.erb within layouts/application (Duration: 1463.6ms | Allocations: 23685)
+Completed 500 Internal Server Error in 7293ms (ActiveRecord: 1.9ms | Allocations: 58447)
+
+
+  
+ActionView::Template::Error (undefined method `collection_id' for #<Flashcard:0x00007f8198866fc0>
+Did you mean?  collection_ids
+               collection_ids=
+               collections
+               collections=):
+    15:         <%= f.text_field :answer %>
+    16:         <% binding.pry %>
+    17:         <%= f.label :collection %>
+    18:         <%= f.collection_select(:collection_id, Collection.all, :id, :name, prompt: true) %>
+    19:         <% binding.pry %>
+    20:         <%= f.submit %>
+    21: 
+  
+app/views/flashcards/new.html.erb:18
+app/views/flashcards/new.html.erb:10
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 21:31:36 -0500
+Processing by FlashcardsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" ORDER BY "flashcards"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ (pry):18:in `new'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_cards" ON "users"."id" = "user_cards"."user_id" WHERE "user_cards"."flashcard_id" = ?[0m  [["flashcard_id", 40]]
+  ↳ app/controllers/flashcards_controller.rb:19:in `new'
+  Rendering flashcards/new.html.erb within layouts/application
+  Rendered flashcards/new.html.erb within layouts/application (Duration: 1416.3ms | Allocations: 24335)
+Completed 500 Internal Server Error in 251952ms (ActiveRecord: 0.8ms | Allocations: 75171)
+
+
+  
+ActionView::Template::Error (undefined method `collection_id' for #<Flashcard:0x00007f81988c75f0>
+Did you mean?  collection_ids
+               collection_ids=
+               collections
+               collections=):
+    15:         <%= f.text_field :answer %>
+    16:         <% binding.pry %>
+    17:         <%= f.label :collection %>
+    18:         <%= f.collection_select(:collection_id, @flashcard.user.find(current_user.id), :id, :name, prompt: true) %>
+    19:         <% binding.pry %>
+    20:         <%= f.submit %>
+    21: 
+  
+app/views/flashcards/new.html.erb:18
+app/views/flashcards/new.html.erb:10
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 21:35:51 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by FlashcardsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering flashcards/new.html.erb within layouts/application
+  Rendered flashcards/new.html.erb within layouts/application (Duration: 3146.6ms | Allocations: 22606)
+Completed 500 Internal Server Error in 3180ms (ActiveRecord: 2.5ms | Allocations: 41987)
+
+
+  
+ActionView::Template::Error (undefined method `user' for #<Flashcard:0x00007f8197276ad0>
+Did you mean?  users):
+    15:         <%= f.text_field :answer %>
+    16:         <% binding.pry %>
+    17:         <%= f.label :collection %>
+    18:         <%= f.collection_select(:collection_id, @flashcard.user.find(current_user.id), :id, :name, prompt: true) %>
+    19:         <% binding.pry %>
+    20:         <%= f.submit %>
+    21: 
+  
+app/views/flashcards/new.html.erb:18
+app/views/flashcards/new.html.erb:10
+Started DELETE "/flashcards/36" for 127.0.0.1 at 2020-04-16 21:37:06 -0500
+Processing by FlashcardsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PTclDXzvq6HcNT3xLE/ECySESPhjtvEtdqMu1pxqOghri1j5t1mgejStPIHOTJUr9hCjaJ1DGeR9zIEcVzOvag==", "id"=>"36"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" WHERE "flashcards"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/flashcards_controller.rb:40:in `destroy'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms | Allocations: 1726)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Flashcard with 'id'=36):
+  
+app/controllers/flashcards_controller.rb:40:in `destroy'
+Started GET "/flashcards/36" for 127.0.0.1 at 2020-04-16 21:37:16 -0500
+Processing by FlashcardsController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mFlashcard Load (0.1ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" WHERE "flashcards"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/flashcards_controller.rb:7:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 1561)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Flashcard with 'id'=36):
+  
+app/controllers/flashcards_controller.rb:7:in `show'
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 21:37:21 -0500
+Processing by FlashcardsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering flashcards/new.html.erb within layouts/application
+  Rendered flashcards/new.html.erb within layouts/application (Duration: 50.6ms | Allocations: 22269)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 1.2ms | Allocations: 23701)
+
+
+  
+ActionView::Template::Error (undefined method `user' for #<Flashcard:0x00007f8196ae4178>
+Did you mean?  users):
+    15:         <%= f.text_field :answer %>
+    16:         <% binding.pry %>
+    17:         <%= f.label :collection %>
+    18:         <%= f.collection_select(:collection_id, @flashcard.user.find(current_user.id), :id, :name, prompt: true) %>
+    19:         <% binding.pry %>
+    20:         <%= f.submit %>
+    21: 
+  
+app/views/flashcards/new.html.erb:18
+app/views/flashcards/new.html.erb:10
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 21:37:43 -0500
+Processing by FlashcardsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering flashcards/new.html.erb within layouts/application
+  Rendered flashcards/new.html.erb within layouts/application (Duration: 198974.9ms | Allocations: 52668)
+Completed 500 Internal Server Error in 198985ms (ActiveRecord: 0.3ms | Allocations: 54852)
+
+
+  
+ActionView::Template::Error (undefined method `user' for #<Flashcard:0x00007f8192c58e68>
+Did you mean?  users):
+    15:         <%= f.text_field :answer %>
+    16: <% binding.pry %>
+    17:         <%= f.label :collection %>
+    18:         <%= f.collection_select(@flashcard, @flashcard.user.find(current_user.id), :id, :name, prompt: true) %>
+    19:         <% binding.pry %>
+    20:         <%= f.submit %>
+    21: 
+  
+app/views/flashcards/new.html.erb:18
+app/views/flashcards/new.html.erb:10
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 21:41:05 -0500
+Processing by FlashcardsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering flashcards/new.html.erb within layouts/application
+Started GET "/flashcards" for 127.0.0.1 at 2020-04-16 21:41:17 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by FlashcardsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering flashcards/index.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards"[0m
+  ↳ app/views/flashcards/index.html.erb:5
+  Rendered flashcards/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1308)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 89)
+Completed 200 OK in 26ms (Views: 21.6ms | ActiveRecord: 0.5ms | Allocations: 11012)
+
+
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 21:41:22 -0500
+Processing by FlashcardsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering flashcards/new.html.erb within layouts/application
+  Rendered flashcards/new.html.erb within layouts/application (Duration: 152843.1ms | Allocations: 427566)
+Completed 500 Internal Server Error in 152848ms (ActiveRecord: 0.2ms | Allocations: 429010)
+
+
+  
+ActionView::Template::Error (undefined method `user' for #<Flashcard:0x00007f8196ad6dc0>
+Did you mean?  users):
+    15:         <%= f.text_field :answer %>
+    16: 
+    17:         <%= f.label :collection %>
+    18:         <%= f.collection_select(@flashcard, @flashcard.users.find(current_user.id), :id, :name, prompt: true) %>
+    19:         <% binding.pry %>
+    20:         <%= f.submit %>
+    21: 
+  
+app/views/flashcards/new.html.erb:18
+app/views/flashcards/new.html.erb:10
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 21:43:58 -0500
+Processing by FlashcardsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering flashcards/new.html.erb within layouts/application
+  Rendered flashcards/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 2058)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.7ms | Allocations: 4244)
+
+
+  
+ActionView::Template::Error (Couldn't find User with 'id'=35 [WHERE "user_cards"."flashcard_id" IS NULL AND (1=0)]):
+    15:         <%= f.text_field :answer %>
+    16: 
+    17:         <%= f.label :collection %>
+    18:         <%= f.collection_select(@flashcard, @flashcard.users.find(current_user.id), :id, :name, prompt: true) %>
+    19:         <% binding.pry %>
+    20:         <%= f.submit %>
+    21: 
+  
+app/views/flashcards/new.html.erb:18
+app/views/flashcards/new.html.erb:10
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 21:49:33 -0500
+Processing by FlashcardsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering flashcards/new.html.erb within layouts/application
+  Rendered flashcards/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2026)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms | Allocations: 4212)
+
+
+  
+ActionView::Template::Error (Couldn't find User with 'id'=35 [WHERE "user_cards"."flashcard_id" IS NULL AND (1=0)]):
+    15:         <%= f.text_field :answer %>
+    16: 
+    17:         <%= f.label :collection %>
+    18:         <%= f.collection_select(:flashcard, @flashcard.users.find(current_user.id), :id, :name, prompt: true) %>
+    19:         <% binding.pry %>
+    20:         <%= f.submit %>
+    21: 
+  
+app/views/flashcards/new.html.erb:18
+app/views/flashcards/new.html.erb:10
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 21:52:08 -0500
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ (pry):34
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/flashcards/new.html.erb:13
+  [1m[36mCollection Load (0.6ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ?[0m  [["user_id", 35]]
+  ↳ app/views/flashcards/new.html.erb:13
+  Rendered flashcards/new.html.erb within layouts/application (Duration: 829725.5ms | Allocations: 1730588)
+Completed 500 Internal Server Error in 829731ms (ActiveRecord: 2.2ms | Allocations: 1732772)
+
+
+  
+ActionView::Template::Error (undefined method `user' for #<Flashcard:0x00007f819236f2c0>
+Did you mean?  users):
+    15:         <%= f.text_field :answer %>
+    16: 
+    17:         <%= f.label :collection %>
+    18:         <%= f.collection_select(:collection, current_user.collections, :id, :name, prompt: true) %>
+    19:         <% binding.pry %>
+    20:         <%= f.submit %>
+    21: 
+  
+app/views/flashcards/new.html.erb:18
+app/views/flashcards/new.html.erb:10
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by FlashcardsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ?[0m  [["user_id", 35]]
+  ↳ app/controllers/flashcards_controller.rb:14:in `new'
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 2.0ms | Allocations: 20184)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (User(#70097278051780) expected, got #<Collection id: 1, user_id: 35, name: "Greek Mythology", created_at: "2020-04-14 07:46:48", updated_at: "2020-04-16 15:26:12"> which is an instance of Collection(#70097278316040)):
+  
+app/controllers/flashcards_controller.rb:14:in `new'
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 21:54:58 -0500
+Processing by FlashcardsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ?[0m  [["user_id", 35]]
+  ↳ app/controllers/flashcards_controller.rb:14:in `new'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms | Allocations: 1986)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (User(#70097278051780) expected, got #<Collection id: 1, user_id: 35, name: "Greek Mythology", created_at: "2020-04-14 07:46:48", updated_at: "2020-04-16 15:26:12"> which is an instance of Collection(#70097278316040)):
+  
+app/controllers/flashcards_controller.rb:14:in `new'
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 21:55:19 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by FlashcardsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering flashcards/new.html.erb within layouts/application
+  Rendered flashcards/new.html.erb within layouts/application (Duration: 16.1ms | Allocations: 5565)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 1.3ms | Allocations: 18917)
+
+
+  
+ActionView::Template::Error (undefined method `collection' for #<Flashcard:0x00007f8191faf2c0>
+Did you mean?  collections
+               collections=):
+    15:         <%= f.text_field :answer %>
+    16: 
+    17:         <%= f.label :collection %>
+    18:         <%= f.collection_select(:collection, current_user.collections, :id, :name, prompt: true) %>
+    19:         <% binding.pry %>
+    20:         <%= f.submit %>
+    21: 
+  
+app/views/flashcards/new.html.erb:18
+app/views/flashcards/new.html.erb:10
+Started GET "/flashcards/new" for 127.0.0.1 at 2020-04-16 21:55:34 -0500
+Processing by FlashcardsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering flashcards/new.html.erb within layouts/application
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ?[0m  [["user_id", 35]]
+  ↳ app/views/flashcards/new.html.erb:18
+  Rendered flashcards/new.html.erb within layouts/application (Duration: 3013.7ms | Allocations: 28882)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 89)
+Completed 200 OK in 3050ms (Views: 3046.8ms | ActiveRecord: 1.2ms | Allocations: 39099)
+
+
+Started POST "/flashcards" for 127.0.0.1 at 2020-04-16 21:57:54 -0500
+Processing by FlashcardsController#create as HTML
+  Parameters: {"authenticity_token"=>"KtiYqi7ZOoZyITc00dYF/vKcj3L6v0wUkWtj2blVoK58ZOVe5W8xXZq5NkQz1VTeIAhk4gRKpN2aBMwTcgw1zA==", "flashcard"=>{"question"=>"What is a butt?", "answer"=>"very nice", "collections"=>"2"}, "commit"=>"Create Flashcard"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+[31mUnpermitted parameter: :collections[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flashcards_controller.rb:26:in `create'
+  [1m[36mFlashcard Create (1.0ms)[0m  [1m[32mINSERT INTO "flashcards" ("question", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["question", "What is a butt?"], ["answer", "very nice"], ["created_at", "2020-04-17 02:57:54.663437"], ["updated_at", "2020-04-17 02:57:54.663437"]]
+  ↳ app/controllers/flashcards_controller.rb:26:in `create'
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/flashcards_controller.rb:26:in `create'
+Redirected to http://127.0.0.1:3000/flashcards/51
+Completed 302 Found in 12ms (ActiveRecord: 2.9ms | Allocations: 3271)
+
+
+Started GET "/flashcards/51" for 127.0.0.1 at 2020-04-16 21:57:54 -0500
+Processing by FlashcardsController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" WHERE "flashcards"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/controllers/flashcards_controller.rb:7:in `show'
+  Rendering flashcards/show.html.erb within layouts/application
+  Rendered flashcards/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 244)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 0.3ms | Allocations: 10029)
 
 

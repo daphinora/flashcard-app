@@ -1,0 +1,11 @@
+<% provide(:title, 'Edit Card') %>
+
+<%= form_for @flashcard do |f| %>
+    <%= f.label 'Question' %><br>
+    <%= f.text_field :question %><br>
+
+    <%= f.label 'Answer' %><br>
+    <%= f.text_field :answer %><br>
+
+    <%= f.submit "Edit"%>
+<% end %>

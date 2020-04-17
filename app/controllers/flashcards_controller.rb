@@ -8,7 +8,17 @@ class FlashcardsController < ApplicationController
     end
 
     def new
+        # @user_collections = []
         @flashcard = Flashcard.new
+        # binding.pry 
+        # @flashcard.users << current_user.collections
+        # Collection.all.each  do |c|
+        #     if c.user_id == current_user.id
+        #         @user_collections << c
+        #     end
+        # end
+        
+        
     end
 
     def create
@@ -17,8 +27,20 @@ class FlashcardsController < ApplicationController
         redirect_to flashcard_path(@flashcard)
     end
 
+    def edit
+        @flashcard = Flashcard.find(params[:id])
+    end
+
+    def update
+        @flashcard = Flashcard.find(params[:id])
+        @flashcard.update(question: params[:flashcard][:question], answer: params[:flashcard][:answer])
+        redirect_to @flashcard
+    end
+
     def destroy
-        @delete = Flashcard.find(params[:id]).delete
+        @flashcard = Flashcard.find(params[:id])
+        @flashcard.destroy
+        redirect_to flashcards_path
     end
 
     private
@@ -27,3 +49,4 @@ class FlashcardsController < ApplicationController
         params.require(:flashcard).permit(:question, :answer)
     end
 end
+

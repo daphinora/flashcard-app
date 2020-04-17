@@ -1,0 +1,27 @@
+<% provide(:title, 'New Flashcard') %>
+
+
+<div class="col-md-6 col-md-offset-1">
+<h1>Create a new Flashcard</h1>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-1">
+    <%= form_for(@flashcard) do |f| %>
+        <%= f.label :question %>
+        <%= f.text_field :question %>
+
+        <%= f.label :answer %>
+        <%= f.text_field :answer %>
+
+        <%= f.label :collection %>
+        <%= f.collection_select(:collections, current_user.collections, :id, :name, prompt: true) %>
+        <% binding.pry %>
+        <%= f.submit %>
+
+    <% end %>
+  </div>
+</div class="col-md-6 col-md-offset-1">
+
+
+<%# binding.pry %>
