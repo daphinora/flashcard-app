@@ -22766,3 +22766,650 @@ ActionView::Template::Error (no implicit conversion of nil into String):
 app/views/flashcards/index.html.erb:8:in `+'
 app/views/flashcards/index.html.erb:8
 app/views/flashcards/index.html.erb:5
+Started GET "/collections" for 127.0.0.1 at 2020-04-17 00:52:36 -0500
+Processing by CollectionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering collections/index.html.erb within layouts/application
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections"[0m
+  ↳ app/views/collections/index.html.erb:10:in `sort_by'
+  Rendered collections/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1153)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 1.1ms | Allocations: 89)
+Completed 200 OK in 75ms (Views: 67.3ms | ActiveRecord: 0.4ms | Allocations: 11750)
+
+
+Started GET "/static_page/home" for 127.0.0.1 at 2020-04-17 00:52:56 -0500
+Processing by StaticPageController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering static_page/home.html.erb within layouts/application
+  Rendered static_page/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 130)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 0.2ms | Allocations: 10009)
+
+
+Started GET "/collections" for 127.0.0.1 at 2020-04-17 00:52:57 -0500
+Processing by CollectionsController#index as HTML
+  [1m[36mUser Load (9.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering collections/index.html.erb within layouts/application
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections"[0m
+  ↳ app/views/collections/index.html.erb:10:in `sort_by'
+  Rendered collections/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 986)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 48ms (Views: 36.2ms | ActiveRecord: 10.1ms | Allocations: 10272)
+
+
+Started GET "/flashcards" for 127.0.0.1 at 2020-04-17 00:52:59 -0500
+Processing by FlashcardsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering flashcards/index.html.erb within layouts/application
+  [1m[36mFlashcard Load (3.8ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards"[0m
+  ↳ app/views/flashcards/index.html.erb:5
+Started GET "/static_page/home" for 127.0.0.1 at 2020-04-17 00:52:59 -0500
+Processing by StaticPageController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering static_page/home.html.erb within layouts/application
+  Rendered static_page/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 78ms (Views: 75.8ms | ActiveRecord: 0.1ms | Allocations: 9305)
+
+
+Started GET "/collections" for 127.0.0.1 at 2020-04-17 00:53:39 -0500
+Processing by CollectionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering collections/index.html.erb within layouts/application
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections"[0m
+  ↳ app/views/collections/index.html.erb:11:in `sort_by'
+  Rendered collections/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1189)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 89)
+Completed 200 OK in 33ms (Views: 30.8ms | ActiveRecord: 0.4ms | Allocations: 11781)
+
+
+Started GET "/collections" for 127.0.0.1 at 2020-04-17 00:54:04 -0500
+Processing by CollectionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering collections/index.html.erb within layouts/application
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections"[0m
+  ↳ app/views/collections/index.html.erb:11:in `sort_by'
+  Rendered collections/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1175)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 89)
+Completed 200 OK in 95ms (Views: 92.0ms | ActiveRecord: 0.3ms | Allocations: 11771)
+
+
+Started GET "/collections" for 127.0.0.1 at 2020-04-17 00:55:07 -0500
+Processing by CollectionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering collections/index.html.erb within layouts/application
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections"[0m
+  ↳ app/views/collections/index.html.erb:11:in `sort_by'
+  Rendered collections/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1173)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 89)
+Completed 200 OK in 40ms (Views: 36.9ms | ActiveRecord: 0.3ms | Allocations: 11762)
+
+
+Started GET "/collections" for 127.0.0.1 at 2020-04-17 00:55:37 -0500
+Processing by CollectionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering collections/index.html.erb within layouts/application
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections"[0m
+  ↳ app/views/collections/index.html.erb:11:in `sort_by'
+  Rendered collections/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1172)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 89)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.3ms | Allocations: 11768)
+
+
+Started GET "/collections" for 127.0.0.1 at 2020-04-17 00:55:53 -0500
+Processing by CollectionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering collections/index.html.erb within layouts/application
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections"[0m
+  ↳ app/views/collections/index.html.erb:11:in `sort_by'
+  Rendered collections/index.html.erb within layouts/application (Duration: 17.8ms | Allocations: 1172)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 94)
+Completed 200 OK in 98ms (Views: 95.2ms | ActiveRecord: 0.3ms | Allocations: 11776)
+
+
+Started GET "/collections" for 127.0.0.1 at 2020-04-17 00:56:07 -0500
+Processing by CollectionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering collections/index.html.erb within layouts/application
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections"[0m
+  ↳ app/views/collections/index.html.erb:11:in `sort_by'
+  Rendered collections/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1173)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 89)
+Completed 200 OK in 36ms (Views: 32.5ms | ActiveRecord: 0.4ms | Allocations: 11778)
+
+
+Started GET "/collections" for 127.0.0.1 at 2020-04-17 00:56:09 -0500
+Processing by CollectionsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering collections/index.html.erb within layouts/application
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections"[0m
+  ↳ app/views/collections/index.html.erb:11:in `sort_by'
+  Rendered collections/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 986)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 28ms (Views: 25.3ms | ActiveRecord: 0.5ms | Allocations: 10277)
+
+
+Started GET "/collections" for 127.0.0.1 at 2020-04-17 00:57:21 -0500
+Processing by CollectionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering collections/index.html.erb within layouts/application
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections"[0m
+  ↳ app/views/collections/index.html.erb:11:in `sort_by'
+  Rendered collections/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1179)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 89)
+Completed 200 OK in 36ms (Views: 31.5ms | ActiveRecord: 0.4ms | Allocations: 11779)
+
+
+Started GET "/collections" for 127.0.0.1 at 2020-04-17 00:57:31 -0500
+Processing by CollectionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering collections/index.html.erb within layouts/application
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections"[0m
+  ↳ app/views/collections/index.html.erb:11:in `sort_by'
+  Rendered collections/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1179)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 89)
+Completed 200 OK in 30ms (Views: 27.0ms | ActiveRecord: 0.4ms | Allocations: 11775)
+
+
+Started GET "/collections" for 127.0.0.1 at 2020-04-17 00:57:45 -0500
+Processing by CollectionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering collections/index.html.erb within layouts/application
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections"[0m
+  ↳ app/views/collections/index.html.erb:11:in `sort_by'
+  Rendered collections/index.html.erb within layouts/application (Duration: 48.0ms | Allocations: 1174)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 89)
+Completed 200 OK in 84ms (Views: 81.2ms | ActiveRecord: 0.4ms | Allocations: 11769)
+
+
+Started GET "/collections" for 127.0.0.1 at 2020-04-17 00:58:59 -0500
+Processing by CollectionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering collections/index.html.erb within layouts/application
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections"[0m
+  ↳ app/views/collections/index.html.erb:11:in `sort_by'
+  Rendered collections/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1174)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 3.4ms | Allocations: 89)
+Completed 200 OK in 207ms (Views: 203.7ms | ActiveRecord: 0.3ms | Allocations: 11777)
+
+
+Started GET "/static_page/home" for 127.0.0.1 at 2020-04-17 00:59:12 -0500
+Processing by StaticPageController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering static_page/home.html.erb within layouts/application
+  Rendered static_page/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 130)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 40ms (Views: 36.9ms | ActiveRecord: 0.3ms | Allocations: 10014)
+
+
+Started GET "/collections" for 127.0.0.1 at 2020-04-17 00:59:13 -0500
+Processing by CollectionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering collections/index.html.erb within layouts/application
+  [1m[36mCollection Load (0.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections"[0m
+  ↳ app/views/collections/index.html.erb:11:in `sort_by'
+  Rendered collections/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 986)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.3ms | Allocations: 10282)
+
+
+Started GET "/collections/9" for 127.0.0.1 at 2020-04-17 01:00:44 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.3ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 9]]
+  ↳ app/views/collections/show.html.erb:15
+  Rendered collections/show.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1235)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 26ms (Views: 21.9ms | ActiveRecord: 0.7ms | Allocations: 11186)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2020-04-17 01:00:47 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:23
+  Rendered users/show.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1326)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 84ms (Views: 79.9ms | ActiveRecord: 0.5ms | Allocations: 11682)
+
+
+Started GET "/collections/new" for 127.0.0.1 at 2020-04-17 01:00:49 -0500
+Processing by CollectionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering collections/new.html.erb within layouts/application
+  Rendered collections/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1143)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 2235)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% provide(:title, New Collection %>
+
+<h2>Create A New Collection</h2>
+<p>What do you want your new collection to be called?</p>
+<%= form_for(@collection) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.submit "Create Collection!"%>
+<% end %>
+
+<%# f.hidden_field :user_id, value: current_user.id  %>
+
+<%# use sessions in the form to let the app know that when the user creates a collection it should be added to their collections %>
+
+<%# link_to '<button type="button">My Collections</button>'.html_safe, "/users/#{@collection.user_id}" %>
+<%# this needs to use sessions to know what the current user's id is ^^ %>
+):
+1:    <% provide(:title, New Collection %>
+2:    
+3:    <h2>Create A New Collection</h2>
+4:    <p>What do you want your new collection to be called?</p>
+5:    <%= form_for(@collection) do |f| %>
+6:        <%= f.label :name %>
+7:        <%= f.text_field :name %>
+8:        <%= f.submit "Create Collection!"%>
+9:    <% end %>
+10:    
+11:    <%# f.hidden_field :user_id, value: current_user.id  %>
+12:    
+13:    <%# use sessions in the form to let the app know that when the user creates a collection it should be added to their collections %>
+14:    
+15:    <%# link_to '<button type="button">My Collections</button>'.html_safe, "/users/#{@collection.user_id}" %>
+16:    <%# this needs to use sessions to know what the current user's id is ^^ %>
+  
+app/views/collections/new.html.erb:1: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/collections/new.html.erb:1: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/collections/new.html.erb:1: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/collections/new.html.erb:1: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/collections/new.html.erb:1: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/collections/new.html.erb:1: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+Started GET "/collections/new" for 127.0.0.1 at 2020-04-17 01:01:15 -0500
+Processing by CollectionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering collections/new.html.erb within layouts/application
+  Rendered collections/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1143)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms | Allocations: 2847)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% provide(:title, "New Collection" %>
+
+<h2>Create A New Collection</h2>
+<p>What do you want your new collection to be called?</p>
+<%= form_for(@collection) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.submit "Create Collection!"%>
+<% end %>
+
+<%# f.hidden_field :user_id, value: current_user.id  %>
+
+<%# use sessions in the form to let the app know that when the user creates a collection it should be added to their collections %>
+
+<%# link_to '<button type="button">My Collections</button>'.html_safe, "/users/#{@collection.user_id}" %>
+<%# this needs to use sessions to know what the current user's id is ^^ %>
+):
+1:    <% provide(:title, "New Collection" %>
+2:    
+3:    <h2>Create A New Collection</h2>
+4:    <p>What do you want your new collection to be called?</p>
+5:    <%= form_for(@collection) do |f| %>
+6:        <%= f.label :name %>
+7:        <%= f.text_field :name %>
+8:        <%= f.submit "Create Collection!"%>
+9:    <% end %>
+10:    
+11:    <%# f.hidden_field :user_id, value: current_user.id  %>
+12:    
+13:    <%# use sessions in the form to let the app know that when the user creates a collection it should be added to their collections %>
+14:    
+15:    <%# link_to '<button type="button">My Collections</button>'.html_safe, "/users/#{@collection.user_id}" %>
+16:    <%# this needs to use sessions to know what the current user's id is ^^ %>
+  
+app/views/collections/new.html.erb:2: syntax error, unexpected tIVAR, expecting ')'
+app/views/collections/new.html.erb:2: syntax error, unexpected tIVAR, expecting ')'
+app/views/collections/new.html.erb:2: syntax error, unexpected tIVAR, expecting ')'
+app/views/collections/new.html.erb:2: syntax error, unexpected tIVAR, expecting ')'
+app/views/collections/new.html.erb:2: syntax error, unexpected tIVAR, expecting ')'
+app/views/collections/new.html.erb:2: syntax error, unexpected tIVAR, expecting ')'
+Started GET "/collections/new" for 127.0.0.1 at 2020-04-17 01:01:41 -0500
+Processing by CollectionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering collections/new.html.erb within layouts/application
+  Rendered collections/new.html.erb within layouts/application (Duration: 26.7ms | Allocations: 710)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 89)
+Completed 200 OK in 72ms (Views: 68.6ms | ActiveRecord: 0.2ms | Allocations: 11327)
+
+
+Started GET "/collections/new" for 127.0.0.1 at 2020-04-17 01:02:28 -0500
+Processing by CollectionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering collections/new.html.erb within layouts/application
+  Rendered collections/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 642)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 89)
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.4ms | Allocations: 11245)
+
+
+Started GET "/collections/new" for 127.0.0.1 at 2020-04-17 01:02:51 -0500
+Processing by CollectionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering collections/new.html.erb within layouts/application
+  Rendered collections/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 644)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 89)
+Completed 200 OK in 76ms (Views: 72.4ms | ActiveRecord: 0.2ms | Allocations: 11250)
+
+
+Started GET "/collections/new" for 127.0.0.1 at 2020-04-17 01:03:47 -0500
+Processing by CollectionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering collections/new.html.erb within layouts/application
+  Rendered collections/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 649)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 89)
+Completed 200 OK in 89ms (Views: 85.2ms | ActiveRecord: 0.2ms | Allocations: 11252)
+
+
+Started GET "/collections" for 127.0.0.1 at 2020-04-17 01:03:56 -0500
+Processing by CollectionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering collections/index.html.erb within layouts/application
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections"[0m
+  ↳ app/views/collections/index.html.erb:11:in `sort_by'
+  Rendered collections/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1179)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 122ms (Views: 19.9ms | ActiveRecord: 0.3ms | Allocations: 10615)
+
+
+Started GET "/collections" for 127.0.0.1 at 2020-04-17 01:04:35 -0500
+Processing by CollectionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering collections/index.html.erb within layouts/application
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections"[0m
+  ↳ app/views/collections/index.html.erb:11:in `sort_by'
+  Rendered collections/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1174)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 89)
+Completed 200 OK in 29ms (Views: 25.5ms | ActiveRecord: 0.4ms | Allocations: 11777)
+
+
+Started GET "/collections/9" for 127.0.0.1 at 2020-04-17 01:05:47 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 9]]
+  ↳ app/views/collections/show.html.erb:15
+  Rendered collections/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1220)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 56ms (Views: 51.3ms | ActiveRecord: 0.6ms | Allocations: 11155)
+
+
+Started GET "/collections/9" for 127.0.0.1 at 2020-04-17 01:05:49 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 9]]
+  ↳ app/views/collections/show.html.erb:15
+  Rendered collections/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 902)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 24ms (Views: 19.6ms | ActiveRecord: 0.8ms | Allocations: 10685)
+
+
+Started GET "/collections/9" for 127.0.0.1 at 2020-04-17 01:06:29 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.1ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 9]]
+  ↳ app/views/collections/show.html.erb:16
+  Rendered collections/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1232)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 89)
+Completed 200 OK in 39ms (Views: 33.0ms | ActiveRecord: 0.5ms | Allocations: 12329)
+
+
+Started GET "/users/35" for 127.0.0.1 at 2020-04-17 01:07:14 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1238)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms | Allocations: 3419)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% provide(:title, @user.username) %>
+
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+
+
+<div class="row">
+  <p class="col-md-4">
+    <section class="user_info">
+      
+       <h1> Hi <%= @user.username %>! </h1><br>
+       <%= link_to '<button type="button">Create Collection</button>'.html_safe, new_collection_path %>
+       <br><br>
+
+       <%= link_to '<button type="button"> Browse Collections </button>'.html_safe, collections_path %>
+       <br><br>
+
+       <%= link_to '<button type="button">Browse Flashcards</button>'.html_safe, flashcards_path %>
+       <br><br>
+
+       <ul>
+       <% @user.collections.each do |collection| %>
+          <li><%= link_to collection.name, collection_path(collection) %><br> 
+        <% end %>
+        <% else %>
+    <p>No Collections Here Yet! :(</p>
+        <% end %>
+        </ul>
+      </h1>
+    </section>
+  </p>
+</div>
+
+
+):
+1:    <% provide(:title, @user.username) %>
+2:    
+3:    <% flash.each do |message_type, message| %>
+4:      <div class="alert alert-<%= message_type %>"><%= message %></div>
+5:    <% end %>
+6:    
+7:    
+8:    <div class="row">
+9:      <p class="col-md-4">
+10:        <section class="user_info">
+11:          
+12:           <h1> Hi <%= @user.username %>! </h1><br>
+13:           <%= link_to '<button type="button">Create Collection</button>'.html_safe, new_collection_path %>
+14:           <br><br>
+15:    
+16:           <%= link_to '<button type="button"> Browse Collections </button>'.html_safe, collections_path %>
+17:           <br><br>
+18:    
+19:           <%= link_to '<button type="button">Browse Flashcards</button>'.html_safe, flashcards_path %>
+20:           <br><br>
+21:    
+22:           <ul>
+23:           <% @user.collections.each do |collection| %>
+24:              <li><%= link_to collection.name, collection_path(collection) %><br> 
+25:            <% end %>
+26:            <% else %>
+27:        <p>No Collections Here Yet! :(</p>
+28:            <% end %>
+29:            </ul>
+30:          </h1>
+31:        </section>
+32:      </p>
+33:    </div>
+  
+app/views/users/show.html.erb:26: else without rescue is useless
+app/views/users/show.html.erb:37: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:26: else without rescue is useless
+app/views/users/show.html.erb:37: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:26: else without rescue is useless
+app/views/users/show.html.erb:37: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:26: else without rescue is useless
+app/views/users/show.html.erb:37: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:26: else without rescue is useless
+app/views/users/show.html.erb:37: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:26: else without rescue is useless
+app/views/users/show.html.erb:37: syntax error, unexpected end, expecting end-of-input
+Started GET "/collections/9" for 127.0.0.1 at 2020-04-17 01:07:51 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.1ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 9]]
+  ↳ app/views/collections/show.html.erb:16
+  Rendered collections/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1228)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 89)
+Completed 200 OK in 33ms (Views: 28.6ms | ActiveRecord: 0.5ms | Allocations: 12158)
+
+
+Started GET "/users/35" for 127.0.0.1 at 2020-04-17 01:10:11 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ?[0m  [["user_id", 35]]
+  ↳ app/views/users/show.html.erb:23
+  Rendered users/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1337)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 1.0ms | Allocations: 89)
+Completed 200 OK in 57ms (Views: 53.3ms | ActiveRecord: 0.7ms | Allocations: 12430)
+
+
+Started GET "/users/35" for 127.0.0.1 at 2020-04-17 01:10:56 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCollection Load (0.6ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ?[0m  [["user_id", 35]]
+  ↳ app/views/users/show.html.erb:23
+  Rendered users/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1345)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 89)
+Completed 200 OK in 63ms (Views: 58.2ms | ActiveRecord: 1.0ms | Allocations: 12434)
+
+
+Started GET "/users/35" for 127.0.0.1 at 2020-04-17 01:11:13 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = ?[0m  [["user_id", 35]]
+  ↳ app/views/users/show.html.erb:23
+  Rendered users/show.html.erb within layouts/application (Duration: 11.0ms | Allocations: 1345)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 89)
+Completed 200 OK in 46ms (Views: 41.2ms | ActiveRecord: 0.7ms | Allocations: 12433)
+
+
+Started GET "/collections/9" for 127.0.0.1 at 2020-04-17 01:11:43 -0500
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:7:in `show'
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mFlashcard Load (0.2ms)[0m  [1m[34mSELECT "flashcards".* FROM "flashcards" INNER JOIN "card_collections" ON "flashcards"."id" = "card_collections"."flashcard_id" WHERE "card_collections"."collection_id" = ?[0m  [["collection_id", 9]]
+  ↳ app/views/collections/show.html.erb:16
+  Rendered collections/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1228)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 27ms (Views: 23.0ms | ActiveRecord: 0.6ms | Allocations: 11597)
+
+

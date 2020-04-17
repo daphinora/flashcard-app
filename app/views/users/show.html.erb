@@ -20,8 +20,14 @@
        <br><br>
 
        <ul>
+       <% if @user.collections.length > 0 %>
+       <p>Your Collections: </p>
        <% @user.collections.each do |collection| %>
           <li><%= link_to collection.name, collection_path(collection) %><br> 
+          <% end %>
+    
+          <% else %>
+            <p>No Collections Here Yet! :(</p>
         <% end %>
         </ul>
       </h1>
