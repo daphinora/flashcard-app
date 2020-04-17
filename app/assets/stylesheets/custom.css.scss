@@ -4,30 +4,30 @@
 
 /* navbar */
 .navbar-custom {
-  background-color: #16d0d0;
+  background-color: #edffb8;
   font-size: 1.3em;
 }
 
 .navbar-custom .navbar-nav .nav-link {
-  color: #bfacf6;
+  color: #f6abed;
   font-size: 6.4em;
 }
 
 /* universal */
 
 
-
 p {
-  color: #bfacf6;
+  color: #ff99ff;
 }
 
 hr {
-  color: #f6f6ac;
+  color: #ffffe6;
 }
 
 body {
   padding-top: 65px;
-  color: #d016ba;
+  color:  #ff99ff;
+  background-color:  #efe6fe;
 }
 
 section {
@@ -103,16 +103,16 @@ input, textarea, select, .uneditable-input {
 footer {
   margin-top: 100px;
   padding-top: 5px;
-  border-top: 1px solid #d016ba;
-  color: 	 #fde8fa;
+  border-top: 1px solid #efa8e4;
+  color: 	 #f6abed;
 }
 
 footer a {
-  color: #f6abed;
+  color: #337AB7;
 }
 
 footer a:hover {
-  color: #d016ba;
+  color: #efa8e4;
 }
 
 footer small {

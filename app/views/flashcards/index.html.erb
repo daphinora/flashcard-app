@@ -8,6 +8,7 @@
 
 <div class="row">
     <div class="col-md-6 col-md-offset-1">
+
     <p>Add flashcards to your collection:</p><br><br>
         <ul>
         <% @flashcards.each do |card| %>
@@ -15,6 +16,8 @@
             <li><%= link_to "Question", card %><%= ": " + card.question %><br><%= "Answer: " + card.answer %><br><br>
         <% end %>
         </ul>
+
+            <%= link_to '<button type="button">Create Flashcard</button>'.html_safe, "/flashcards/new" %>
 
     </div>
 </div class="col-md-6 col-md-offset-1">
