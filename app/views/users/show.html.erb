@@ -6,24 +6,32 @@
 
 
 <div class="row">
-  <aside class="col-md-4">
+  <p class="col-md-4">
     <section class="user_info">
       
-       <h1> Hi <%= @user.username %>! </h1>
-       <%= link_to '<button type="button">Create New Collection</button>'.html_safe, new_collection_path %>
+       <h1> Hi, <%= @user.username %>! </h1><br>
+       <%= link_to '<button type="button">Create Collection</button>'.html_safe, new_collection_path %>
+      
 
-       <%= link_to '<button type="button"> View Everyone\'s collections </button>'.html_safe, collections_path %>
+       <%= link_to '<button type="button"> Browse Collections </button>'.html_safe, collections_path %>
+      
 
-       <%= link_to '<button type="button">View List of All Flashcards</button>'.html_safe, flashcards_path %>
+       <%= link_to '<button type="button">Browse Flashcards</button>'.html_safe, flashcards_path %>
+      
 
-       <h1> These are your current collections:
-       <ul>
+       <br><br><br>
+       <% if @user.collections.length > 0 %>
+       <p>Your Collections: </p>
        <% @user.collections.each do |collection| %>
-          <li><%= link_to collection.name, collection_path(collection) %><br> 
+          <%= link_to collection.name, collection_path(collection) %><br> 
+          <% end %>
+    
+          <% else %>
+            <p>No Collections Here Yet! :(</p>
         <% end %>
-        </ul>
+      
       </h1>
     </section>
-  </aside>
+  </p>
 </div>
 

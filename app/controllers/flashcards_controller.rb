@@ -14,11 +14,24 @@ class FlashcardsController < ApplicationController
     def create
         @flashcard = Flashcard.new(flashcard_params)
         @flashcard.save
+        
         redirect_to flashcard_path(@flashcard)
     end
 
+    def edit
+        @flashcard = Flashcard.find(params[:id])
+    end
+
+    def update
+        @flashcard = Flashcard.find(params[:id])
+        @flashcard.update(question: params[:flashcard][:question], answer: params[:flashcard][:answer])
+        redirect_to @flashcard
+    end
+
     def destroy
-        @delete = Flashcard.find(params[:id]).delete
+        @flashcard = Flashcard.find(params[:id])
+        @flashcard.destroy
+        redirect_to flashcards_path
     end
 
     private
@@ -27,3 +40,4 @@ class FlashcardsController < ApplicationController
         params.require(:flashcard).permit(:question, :answer)
     end
 end
+

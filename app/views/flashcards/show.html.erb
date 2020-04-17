@@ -1,8 +1,24 @@
-<h2>Flashcard information</h2>
+<% provide(:title, 'Flashcard') %>
 
-<%= "Question: " + @flashcard.question %><br>
-<%= "Answer: " + @flashcard.answer %><br><br>
+<div class="col-md-6 col-md-offset-1">
+    <h1>Flashcard information</h1><br><br>
+</div>
 
-<%= link_to '<button type="button">Edit Flashcard</button>'.html_safe, "/flashcards/#{@flashcard.id}/edit"%>
+<div class="row">
+  <div class="col-md-6 col-md-offset-1">
+        <%= "Question: " + @flashcard.question %><br>
+        <%= "Answer: " + @flashcard.answer %><br><br><br><br>
 
-<%= link_to '<button type="button">Delete Flashcard</button>'.html_safe, @flashcard.destroy %>
+        <%= link_to '<button type="button">Edit Flashcard</button>'.html_safe, "/flashcards/#{@flashcard.id}/edit"%>
+
+
+        <%= link_to '<button type="button">DESTROY FLASHCARD</button>'.html_safe, flashcard_path(@flashcard),
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' } %>
+                    
+        <%= link_to '<button type="button">Create Collection</button>'.html_safe, collections_path %><br><br><br><br>
+
+
+  </div>
+</div class="col-md-6 col-md-offset-1">
+
