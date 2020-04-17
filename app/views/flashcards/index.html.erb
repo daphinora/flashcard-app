@@ -1,9 +1,20 @@
+<% provide(:title, "Flashcards") %>
+
+<div class="col-md-6 col-md-offset-1">
 <h2>Flashcards!</h2>
-<h3>Add flashcards to your collection:</h3>
+</div>
 
 <%# @sorted_flashcards = @flashcards.all.sort_by{|card| card.tags.first} %>
-<% @flashcards.each do |card| %>
-<%binding.pry%>
 
-<%= link_to "Question", card %><%= ": " + card.question %><br><%= "Answer: " + card.answer %><br><br>
-<% end %>
+<div class="row">
+    <div class="col-md-6 col-md-offset-1">
+    <p>Add flashcards to your collection:</p><br><br>
+        <ul>
+        <% @flashcards.each do |card| %>
+
+            <li><%= link_to "Question", card %><%= ": " + card.question %><br><%= "Answer: " + card.answer %><br><br>
+        <% end %>
+        </ul>
+
+    </div>
+</div class="col-md-6 col-md-offset-1">

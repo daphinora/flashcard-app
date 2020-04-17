@@ -6,7 +6,7 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-1">
-Click on a collection to view its contents:<br><br>
+  <p>Click on a collection to view its contents:</p><br><br>
         <ul>
         <% @sorted_collections = @collections.sort_by{|coll| coll.name}%>
         <% @sorted_collections.each do |coll| %>
