@@ -8,17 +8,7 @@ class FlashcardsController < ApplicationController
     end
 
     def new
-        # @user_collections = []
         @flashcard = Flashcard.new
-        # binding.pry 
-        # @flashcard.users << current_user.collections
-        # Collection.all.each  do |c|
-        #     if c.user_id == current_user.id
-        #         @user_collections << c
-        #     end
-        # end
-        
-        
     end
 
     def create

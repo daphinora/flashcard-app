@@ -16,7 +16,7 @@
 
         <%= f.label :collection %>
         <%= f.collection_select(:collections, current_user.collections, :id, :name, prompt: true) %>
-        <% binding.pry %>
+        
         <%= f.submit %>
 
     <% end %>
@@ -24,4 +24,4 @@
 </div class="col-md-6 col-md-offset-1">
 
 
-<%# binding.pry %>
+
