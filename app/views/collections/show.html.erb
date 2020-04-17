@@ -9,9 +9,7 @@
 <div class="col-md-6 col-md-offset-1">
 <%= link_to '<button type="button">New Flashcard</button>'.html_safe, "/flashcards/new" %>
 
-<%= link_to '<button type="button">Add Flashcards from Index</button>'.html_safe, "/flashcards" %></h2>
-
-<%= link_to '<button type="button">My Collections</button>'.html_safe, "/users/#{@collection.user_id}" %>
+<%= link_to '<button type="button">My Collections</button>'.html_safe, "/users/#{@collection.user_id}" %><br><br>
 
 <% if @collection.flashcards.length > 0 %>
     <% @collection.flashcards.each do |card|%>
