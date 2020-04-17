@@ -2,27 +2,22 @@ CardFlash (insert a pun or something? ASCII? Might be a stretch goal)
 
 Welcome to CardFlash, a flashcard generator!
 
-Add a description of the app here!
-
+We're still working on this app, but so far you can create flashcards or browse through all of the flashcards previously created by other users and add them to one of your collections, you can create collections, you can edit flashcards, and you can delete flashcards. Right now, this app is aimed at small, personal groups. We plan on making it more friendly for wide use.
 
 ++++++++++++++++++++++++++++++++++++++++++++
 
 Stretch goals:
 
-~User password authentication
-
-~fancy flip card things for the flashcards
-
-~difficulty
+~fancy flip card things for the flashcards: question on one side, answer on the other? Hover feature?
 
 ~user-to-user interaction
-
-~ascii prettiness
 
 ~logout
 
 ~deleting flashcards unique to a collection while deleting the collection
 
-~collection tags
+~tags: adding tags to flashcards and filtering the indexes for flashcards and collections by tag
 
-~groups??
+~change the header so that when we login we can see our name instead of the "log in/sign up"
+
+~make the footer stick to the bottom of the page
