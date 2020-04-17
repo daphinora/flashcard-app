@@ -1,0 +1,24 @@
+<% provide(:title, 'Flashcard') %>
+
+<div class="col-md-6 col-md-offset-1">
+    <h1>Flashcard information</h1><br><br>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-1">
+        <%= "Question: " + @flashcard.question %><br>
+        <%= "Answer: " + @flashcard.answer %><br><br><br><br>
+
+        <%= link_to '<button type="button">Edit Flashcard</button>'.html_safe, "/flashcards/#{@flashcard.id}/edit"%>
+
+
+        <%= link_to '<button type="button">DESTROY FLASHCARD</button>'.html_safe, flashcard_path(@flashcard),
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' } %>
+                    
+       <br><br><br><br>
+
+
+  </div>
+</div class="col-md-6 col-md-offset-1">
+

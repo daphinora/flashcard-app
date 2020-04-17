@@ -1,0 +1,19 @@
+<% provide(:title, 'Edit Card') %>
+
+<div class="col-md-6 col-md-offset-1">
+<h2>Edit FlashCard</h2>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-1">
+<%= form_for @flashcard do |f| %>
+    <%= f.label 'Question' %><br>
+    <%= f.text_field :question %><br>
+
+    <%= f.label 'Answer' %><br>
+    <%= f.text_field :answer %><br>
+
+    <%= f.submit "Edit"%>
+<% end %>
+</div>
+</div>

@@ -1,0 +1,37 @@
+<% provide(:title, @user.username) %>
+
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+
+
+<div class="row">
+  <p class="col-md-4">
+    <section class="user_info">
+      
+       <h1> Hi, <%= @user.username %>! </h1><br>
+       <%= link_to '<button type="button">Create Collection</button>'.html_safe, new_collection_path %>
+      
+
+       <%= link_to '<button type="button"> Browse Collections </button>'.html_safe, collections_path %>
+      
+
+       <%= link_to '<button type="button">Browse Flashcards</button>'.html_safe, flashcards_path %>
+      
+
+       <br><br><br>
+       <% if @user.collections.length > 0 %>
+       <p>Your Collections: </p>
+       <% @user.collections.each do |collection| %>
+          <%= link_to collection.name, collection_path(collection) %><br> 
+          <% end %>
+    
+          <% else %>
+            <p>No Collections Here Yet! :(</p>
+        <% end %>
+      
+      </h1>
+    </section>
+  </p>
+</div>
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+
+  <body>
+    <header class="navbar navbar-fixed-top navbar-custom navbar">
+      <div class=".navbar-custom .navbar-nav .nav-link>
+        <nav class="navbar navbar-custom">
+          <ul class="nav navbar-nav navbar-center">
+            <li><%= link_to "Home", static_page_home_path %></li>  
+            <li><%= link_to "Collections", collections_path %></li> 
+            <li><%= link_to "Flashcards", flashcards_path %></li> 
+            <li><%= link_to "My Page", user_path(current_user) %></li>   
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Log in", login_path %></li>   
+            <li><%= link_to "New User", signup_path %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
+  </body>
+  
+</html>
