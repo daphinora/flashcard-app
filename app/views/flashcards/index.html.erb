@@ -1,6 +1,7 @@
 <% provide(:title, "Flashcards") %>
 
 <div class="col-md-6 col-md-offset-1">
+<ul>
 <h2>Flashcards!</h2>
 </div>
 
@@ -9,8 +10,7 @@
 <div class="row">
     <div class="col-md-6 col-md-offset-1">
 
-    <p>Add flashcards to your collection:</p><br><br>
-        <ul>
+    <p>Add flashcards to your collection:</p><br>
         <% @flashcards.each do |card| %>
 
             <li><%= link_to "Question", card %><%= ": " + card.question %><br><%= "Answer: " + card.answer %><br><br>

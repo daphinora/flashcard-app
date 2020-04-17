@@ -12,9 +12,6 @@
 
         <%= f.label :answer %>
         <%= f.text_field :answer %>
-
-        <%= f.label :collection %>
-        <%= f.collection_select(:collections, current_user.collections, :id, :name, prompt: true) %>
         
         <%= f.submit %>
 

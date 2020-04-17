@@ -1,13 +1,13 @@
 <% provide(:title, 'Collections') %>
 
 <div class="col-md-6 col-md-offset-1">
+<ul>
 <h1>Collections</h1>
 </div>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-1">
-  <p>Click on a collection to view its contents:</p><br><br>
-        <ul>
+  <p>Click on a collection to view its contents:</p><br>
         <% @sorted_collections = @collections.sort_by{|coll| coll.name}%>
         <% @sorted_collections.each do |coll| %>
         <li><%= link_to coll.name, collection_path(coll)%><br><br>

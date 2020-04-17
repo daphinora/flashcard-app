@@ -18,12 +18,7 @@
                     
         <%= link_to '<button type="button">Create Collection</button>'.html_safe, collections_path %><br><br><br><br>
 
-        <%= form_for(@flashcard) do |f| %>
-            <%= f.label :collection %>
-            <%= f.collection_select(:collections, current_user.collections, :id, :name, prompt: true) %>
 
-            <%= f.submit "Add to your collection"%><br><br><br><br>
-        <% end %>
   </div>
 </div class="col-md-6 col-md-offset-1">
 

@@ -19,9 +19,20 @@
         <%= "Answer: " + card.answer %><br><br>
     <% end %>
     
-<% else %>
-    <p>No Flashcards Here Yet! :(</p>
+<% else %><br>
+  <br>  <p>No Flashcards Here Yet! :(</p>
 <% end %>
+        <%= form_for @collection do |f|%>
+      
+        <%= f.hidden_field :collection_id, value: @collection.id %>
+
+          <% @collection.flashcards.each do |flash|%>
+            <%= f.hidden_field :flashcard_ids, multiple: true, value: flash.id  %>
+          <% end %>
+        <%= f.label  :name  %>
+        <%= f.collection_select(:flashcard_ids, Flashcard.all, :id, :question, {prompt: true}, {multiple: true}) %>
+        <%= f.submit %>
+        <%end%>
 
 </div>
 </div class="col-md-6 col-md-offset-1">

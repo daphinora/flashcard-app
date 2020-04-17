@@ -14,6 +14,7 @@ class FlashcardsController < ApplicationController
     def create
         @flashcard = Flashcard.new(flashcard_params)
         @flashcard.save
+        
         redirect_to flashcard_path(@flashcard)
     end
 
