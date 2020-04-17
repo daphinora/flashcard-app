@@ -1,4 +1,4 @@
-CardFlash (insert a pun or something? ASCII? Might be a stretch goal)
++++++++++++++++++CardFlash+++++++++++++++++
 
 Welcome to CardFlash, a flashcard generator!
 
