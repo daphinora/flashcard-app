@@ -3,5 +3,7 @@
 
 <%# @sorted_flashcards = @flashcards.all.sort_by{|card| card.tags.first} %>
 <% @flashcards.each do |card| %>
+<%binding.pry%>
+
 <%= link_to "Question", card %><%= ": " + card.question %><br><%= "Answer: " + card.answer %><br><br>
 <% end %>

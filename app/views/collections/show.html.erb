@@ -1,6 +1,16 @@
-<h2><%=@collection.name%>
+<% provide(:title, ' Collection') %>
+
+<div class="col-md-6 col-md-offset-1">
+    <h1><%=@collection.name%></h1><br><br>
+</div>
+
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-1">
 <%= link_to '<button type="button">New Flashcard</button>'.html_safe, "/flashcards/new" %>
 <%= link_to '<button type="button">Add Flashcards from Index</button>'.html_safe, "/flashcards" %></h2>
+
+<%= link_to '<button type="button">My Collections</button>'.html_safe, "/users/#{@collection.user_id}" %>
 
 <% if @collection.flashcards.length > 0 %>
     <% @collection.flashcards.each do |card|%>
@@ -11,7 +21,8 @@
     <p>No Flashcards Here Yet! :(</p>
 <% end %>
 
-<%= link_to '<button type="button">My Collections</button>'.html_safe, "/users/#{@collection.user_id}" %>
+  </div>
+</div class="col-md-6 col-md-offset-1">
 <%# Change this if we get to sessions--we need to link to the current user's collections isntead of just the current collection's user show page lol %>
 
 

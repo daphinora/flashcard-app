@@ -11,13 +11,17 @@
 
 
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
-        <%= link_to "Card Flash", static_page_home_path %>
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Home", static_page_home_path %></li>
-            <li><%= link_to "Log in", login_path %></li>       
+    <header class="navbar navbar-fixed-top navbar-custom navbar">
+      <div class=".navbar-custom .navbar-nav .nav-link>
+        <nav class="navbar navbar-custom">
+          <ul class="nav navbar-nav navbar-center">
+            <li><%= link_to "Home", static_page_home_path %></li>  
+            <li><%= link_to "Collections", collections_path %></li> 
+            <li><%= link_to "Flashcards", flashcards_path %></li> 
+            <li><%= link_to "My Page", user_path(current_user) %></li>   
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Log in", login_path %></li>   
             <li><%= link_to "New User", signup_path %></li>
           </ul>
         </nav>

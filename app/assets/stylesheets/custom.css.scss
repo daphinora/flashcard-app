@@ -2,7 +2,28 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* navbar */
+.navbar-custom {
+  background-color: #16d0d0;
+  font-size: 1.3em;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+  color: #bfacf6;
+  font-size: 6.4em;
+}
+
 /* universal */
+
+
+
+p {
+  color: #bfacf6;
+}
+
+hr {
+  color: #f6f6ac;
+}
 
 body {
   padding-top: 65px;
